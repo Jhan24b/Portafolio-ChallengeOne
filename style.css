@@ -147,17 +147,36 @@ section.about{
 section.skills{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    width: 100%;
 }
 
 .skills__line{
     display: flex;
     flex-direction: row;
     align-content: center;
+    box-sizing: border-box;
 }
 
 .skills__box{
-    
+    width: 142px;
+    height: 144px;
+    background-color: var(--color-letra-secundaria);
+    padding: 16px;
+    margin: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.skills__ul{
+    padding: 0;
+}
+
+.skills__img__item{
+    max-width: 24px;
 }
 
 /*Sección Hobbies*/
@@ -172,6 +191,22 @@ section.hobbies{
     display: flex;
     flex-direction: row;
     align-content: center;
+}
+
+.hobbies__box{
+    width: 142px;
+    height: 144px;
+    background-color: var(--color-letra-secundaria);
+    padding: 16px;
+    margin: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.hobbies__ul{
+    padding: 0;
 }
 
 /* Experiencia Académica*/
@@ -238,22 +273,33 @@ section.formcontato{
 }
 
 /*footeer*/
-
-.footer{
-   justify-content: center;
-   background-color: var(--color-secundario);
-   width: 100%;
-   align-items: center;
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--color-secundario);
+    width: 100%;
+    align-items: center;
 }
 
-.footer__rodape{
+.footer__rodape {
     text-align: center;
     padding: 48px 0px;
 }
 
-.footer__texto{
+.footer__texto {
     margin: 0px;
     color: var(--color-letra-secundaria);
+}
+
+.footer__logos{
+    /* min-width: 120px; */
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__logos__items {
+    width: 40px;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
