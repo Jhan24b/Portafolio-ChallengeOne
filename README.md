@@ -15,7 +15,3 @@ Incluye la etiqueta "**challengeoneportafolio4**" o "**challengeoneportafolio5**
 ### ¿Cómo hago la entrega final de mi proyecto?
 ---
 4) Coloca tus datos en el formulario de entrega con el **link del proyecto publicado con GitHub Pages**
-
-🔹 [Link del formulario](https://lp.alura.com.br/alura-latam-entrega-challenge-one-esp-front-end)
-
-![image](https://user-images.githubusercontent.com/92184087/208179417-7965c06e-21d6-4174-b76a-95ec648edc00.png)
