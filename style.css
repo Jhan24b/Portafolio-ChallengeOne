@@ -439,7 +439,7 @@ section.formcontato {
     flex-direction: row;
     align-items: center;
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .formcontato__img {
