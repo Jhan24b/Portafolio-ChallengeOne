@@ -4,15 +4,30 @@ en las secciones señaladas */
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
+*{
+    box-sizing: border-box;
+}
+
 :root{
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --color-fondo: #F8F6FA;
    --cor-de-link: #000;
+   --color-base: #fff;
    --color-seccion-secundario: #E4ECFF;
    /* --color-secundario: #334CA6; */
    --color-secundario: #313b72;
    --color-letra-secundaria: #eeeeee;
+   --color-boton: #e3edf7;
+   --color-titleForm:royalblue;
+   --color-submit-hover: rgb(56, 90, 194);
+   --color-signin:rgba(88, 87, 87, 0.822);
+   --color-form-border-label: rgba(105, 105, 105, 0.397);
+   --color-btn-hover: #333333;
+   --color-learn-more:#282936;
+   --color-for-label-input: grey;
+   --color-box-shadow:#bababa;
+   --color-success: green;
 }
 
 body {
@@ -143,6 +158,21 @@ section.about{
     align-items: flex-start;    
 }
 
+.about__paragraph{
+    text-align: justify;
+}
+
+.about__sign{
+    width: 240px;
+}
+
+.about__img__box{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
 /* Skills */
 section.skills{
     display: flex;
@@ -162,7 +192,6 @@ section.skills{
 .skills__box{
     width: 142px;
     height: 144px;
-    background-color: var(--color-letra-secundaria);
     padding: 16px;
     margin: 0px 16px;
     display: flex;
@@ -196,13 +225,16 @@ section.hobbies{
 .hobbies__box{
     width: 142px;
     height: 144px;
-    background-color: var(--color-letra-secundaria);
     padding: 16px;
     margin: 0px 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+}
+
+.hobbies__img__item{
+    max-width: 45px;
 }
 
 .hobbies__ul{
@@ -239,6 +271,14 @@ section.experience{
     box-sizing: border-box;
 }
 
+.experiencie__boxv2{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    padding: 32px 0px;
+    box-sizing: border-box;
+}
+
 .experiencie__img{
     max-width: 700px;
 }
@@ -262,7 +302,7 @@ section.experience{
 .btn {
     display: flex;
     align-items: center;
-    background: #e3edf7;
+    background: var(--color-boton);
     padding: .5em;
     border-radius: 10px;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
@@ -288,7 +328,7 @@ section.experience{
 
 .btn:hover svg {
     transform: scale(0.9);
-    fill: #333333;
+    fill: var(--color-btn-hover);
 }
 
 /* boton demo */
@@ -318,7 +358,7 @@ button.learn-more .circle {
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: #282936;
+    background: var(--color-learn-more);
     border-radius: 1.625rem;
 }
 
@@ -328,7 +368,7 @@ button.learn-more .circle .icon {
     top: 0;
     bottom: 0;
     margin: auto;
-    background: #fff;
+    background: var(--color-base);
 }
 
 button.learn-more .circle .icon.arrow {
@@ -346,8 +386,8 @@ button.learn-more .circle .icon.arrow::before {
     right: 0.0625rem;
     width: 0.625rem;
     height: 0.625rem;
-    border-top: 0.125rem solid #fff;
-    border-right: 0.125rem solid #fff;
+    border-top: 0.125rem solid var(--color-base);
+    border-right: 0.125rem solid var(--color-base);
     transform: rotate(45deg);
 }
 
@@ -360,7 +400,7 @@ button.learn-more .button-text {
     bottom: 0;
     padding: 0.75rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
+    color: var(--color-learn-more);
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
@@ -372,12 +412,12 @@ button:hover .circle {
 }
 
 button:hover .circle .icon.arrow {
-    background: #fff;
+    background: var(--color-base);
     transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
-    color: #fff;
+    color: var(--color-base);
 }
 
 /*Contacto*/
@@ -415,7 +455,7 @@ section.formcontato{
     flex-direction: column;
     gap: 10px;
     max-width: 350px;
-    background-color: #fff;
+    background-color: var(--color-base);
     padding: 20px;
     border-radius: 20px;
     position: relative;
@@ -423,7 +463,7 @@ section.formcontato{
 
 .titleForm {
     font-size: 28px;
-    color: royalblue;
+    color: var(--color-titleForm);
     font-weight: 600;
     letter-spacing: -1px;
     position: relative;
@@ -440,13 +480,13 @@ section.formcontato{
     width: 16px;
     border-radius: 50%;
     left: 0px;
-    background-color: royalblue;
+    background-color: var(--color-titleForm);
 }
 
 .titleForm::before {
     width: 18px;
     height: 18px;
-    background-color: royalblue;
+    background-color: var(--color-titleForm);
 }
 
 .titleForm::after {
@@ -457,7 +497,7 @@ section.formcontato{
 
 .message,
 .signin {
-    color: rgba(88, 87, 87, 0.822);
+    color: var(--color-signin);
     font-size: 14px;
 }
 
@@ -466,11 +506,11 @@ section.formcontato{
 }
 
 .signin a {
-    color: royalblue;
+    color: var(--color-titleForm);
 }
 
 .signin a:hover {
-    text-decoration: underline royalblue;
+    text-decoration: underline var(--color-titleForm);
 }
 
 .form__label {
@@ -478,10 +518,10 @@ section.formcontato{
 }
 
 .form__label .input, .formcontato__textarea{
-    width: 90%;
+    width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
-    border: 1px solid rgba(105, 105, 105, 0.397);
+    border: 1px solid var(--color-form-border-label);
     border-radius: 10px;
 }
 
@@ -489,7 +529,7 @@ section.formcontato{
     position: absolute;
     left: 10px;
     top: 15px;
-    color: grey;
+    color: var(--color-for-label-input);
     font-size: 0.9em;
     cursor: text;
     transition: 0.3s ease;
@@ -508,22 +548,22 @@ section.formcontato{
 }
 
 .form__label .input:valid+span {
-    color: green;
+    color: var(--color-success);
 }
 
 .submit {
     border: none;
     outline: none;
-    background-color: royalblue;
+    background-color: var(--color-titleForm);
     padding: 10px;
     border-radius: 10px;
-    color: #fff;
+    color: var(--color-base);
     font-size: 16px;
     transform: .3s ease;
 }
 
 .submit:hover {
-    background-color: rgb(56, 90, 194);
+    background-color: var(--color-submit-hover);
 }
 
 @keyframes pulse {
@@ -617,4 +657,12 @@ Utiliza las referencias de los breakpoints @media abajo */
 .title__bio, .about__title, .skills__title, 
 .hobbies__title, .academic__title, .experience__section__title{
     font-size: 28px;
+}
+
+.hobbies__box,
+.skills__box {
+    border-radius: 50px;
+    background: var(--color-base);
+    box-shadow: 24px 24px 22px var(--color-box-shadow),
+        -24px -24px 22px var(--color-base);
 }
