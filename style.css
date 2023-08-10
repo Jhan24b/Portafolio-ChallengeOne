@@ -431,7 +431,7 @@ button:hover .button-text {
 /*Contacto*/
 
 section.formcontato {
-    padding: 0px 128px;
+    padding: 32px 128px;
 }
 
 .formcontato__contacto {
@@ -439,6 +439,7 @@ section.formcontato {
     flex-direction: row;
     align-items: center;
     box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .formcontato__img {
