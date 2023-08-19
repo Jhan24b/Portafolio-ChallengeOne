@@ -264,6 +264,22 @@ section.academic {
     align-content: center;
 }
 
+.academic__courses__box{
+    box-sizing: border-box;
+    max-width: 300px;
+}
+
+.academic__courses__item__img{
+    height: 130px;
+    display: flex;
+    align-items: center;
+}
+
+.academic__courses__item__img__content{
+    max-width: 280px;
+    
+}
+
 /* experiencia*/
 
 section.experience {
@@ -287,7 +303,7 @@ section.experience {
     box-sizing: border-box;
 }
 
-.experiencie__img {
+.experience__img {
     max-width: 700px;
 }
 
