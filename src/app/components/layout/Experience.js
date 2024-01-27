@@ -51,7 +51,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="max-w-5xl mx-auto text-center" id="experience">
+    <section className="max-w-6xl mx-auto text-center" id="experience">
       <h2 className="text-cerulean-blue-900 font-bold text-[36px] pt-12 pb-4">
         Experiencia Profesional
       </h2>

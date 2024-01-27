@@ -77,9 +77,9 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* <Academic />
+      {/* <Academic />*/}
       
-      <Contact /> */}
+      <Contact />
     </>
   );
 }

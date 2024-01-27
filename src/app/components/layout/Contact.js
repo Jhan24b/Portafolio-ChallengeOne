@@ -1,12 +1,14 @@
+import Image from "next/image";
+
 export default function Contact() {
   return (
-    <section class="formcontato" id="contacto">
-      <div>
-        <div>
-          <img src="assets\contact_image.png" />
+    <section class="max-w-4xl mx-auto my-16" id="contacto">
+      <div className="flex gap-8">
+        <div className="flex justify-center items-center">
+          <Image width={360} height={450} src="/contact_image.png" />
         </div>
-        <div>
-          <form>
+        <div className="py-8">
+          <form className="flex flex-col gap-4">
             <p>Necesitas un prospecto?</p>
             <p>
               Complete el siguiente formulario y me pondré en contacto con usted
@@ -36,9 +38,11 @@ export default function Contact() {
               placeholder="Mensaje"
             ></textarea>
 
-            <button class="submit" type="submit">
-              Enviar Mensaje
-            </button>
+            <div className="flex justify-center">
+              <button class="submit" type="submit">
+                Enviar Mensaje
+              </button>
+            </div>
           </form>
         </div>
       </div>
