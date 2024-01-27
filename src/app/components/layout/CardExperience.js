@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Github from "../icons/Github";
 import Link from "next/link";
+import Plane from "../icons/Plane";
 
 export default function CardExperience({ card }) {
   const {
@@ -55,6 +56,7 @@ export default function CardExperience({ card }) {
 
           <Link href={urlProduction} target="_blank">
             <span>Ver demo</span>
+            <Plane className="w-7 h-7"/>
           </Link>
         </div>
       </div>

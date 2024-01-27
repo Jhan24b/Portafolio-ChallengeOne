@@ -44,14 +44,14 @@ export default function Experience() {
       tech: [HtmlLogo, Css, LogoJavaScript],
       img: "/decod_print.png",
       urlRepository:
-        "https://github.com/alura-challenges/challenge-one-encriptador-latam",
+        "https://github.com/Jhan24b/ChallengeOne",
       urlProduction:
-        "https://github.com/alura-challenges/challenge-one-encriptador-latam",
+        "https://jhan24b.github.io/ChallengeOne/",
     },
   ];
 
   return (
-    <section className="max-w-6xl mx-auto text-center" id="experience">
+    <section className="max-w-6xl mx-auto text-center my-40 md:my-4" id="experience">
       <h2 className="text-cerulean-blue-900 font-bold text-[36px] pt-12 pb-4">
         Experiencia Profesional
       </h2>

@@ -7,7 +7,7 @@ import Instagram from "../icons/Instagram";
 
 export default function About() {
   return (
-    <section className="max-w-4xl mx-8 my-4 h-[80vh]" id="about">
+    <section className="max-w-4xl mx-8 md:mx-auto my-4 h-[80vh]" id="about">
       <div className="about md:grid grid-cols-2 h-full items-center">
         <div className="flex justify-center">
           <Image
@@ -29,7 +29,7 @@ export default function About() {
             por la tecnología y la programación me ha llevado a especializarme
             en el desarrollo de aplicaciones mobiles y web.
           </h3>
-          <div className="flex gap-8 px-4 py-2 justify-center items-center flex-wrap">
+          <div className="flex gap-8 mx-4 my-2 justify-center items-center flex-wrap h-8">
             <Link className="" href="https://github.com/Jhan24b">
               <Github className="w-10 h-10" />
               Github

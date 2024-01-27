@@ -13,7 +13,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="max-w-4xl mx-auto my-16" id="contacto">
+    <section className="max-w-4xl mx-auto my-16" id="contact">
       <div className="md:flex gap-8">
         <div className="flex flex-col justify-center max-w-96 mx-16">
           <h2 className="text-astronaut-700 text-[32px] font-medium pb-4">
@@ -58,7 +58,7 @@ export default function Contact() {
               <input
                 required=""
                 placeholder="Celular"
-                type="text"
+                type="tel"
                 class="input"
                 value={celular}
                 onChange={(ev) => setCelular(ev.target.value)}

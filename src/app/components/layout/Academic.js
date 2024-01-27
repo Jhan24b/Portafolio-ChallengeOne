@@ -1,4 +1,5 @@
 export default function Academic() {
+  const formation = [{title:'',subtitle:'',duration:'',img:''}]
   return (
     <section class="academic" id="formacion">
       <h2 class="academic__title">Formación académica</h2>
