@@ -7,7 +7,7 @@ import Instagram from "../icons/Instagram";
 
 export default function About() {
   return (
-    <section className="max-w-4xl mx-8 md:mx-auto my-4 h-[80vh]" id="about">
+    <section className="max-w-4xl mx-8 md:mx-auto my-4 md:h-[80vh]" id="about">
       <div className="about md:grid grid-cols-2 h-full items-center">
         <div className="flex justify-center">
           <Image
@@ -48,7 +48,10 @@ export default function About() {
               Instagram
             </Link>
 
-            <Link className="" href="https://www.linkedin.com/in/anthony-torres-13591b1b5/">
+            <Link
+              className=""
+              href="https://www.linkedin.com/in/anthony-torres-13591b1b5/"
+            >
               <Download className="w-8 h-8" />
               Currículo
             </Link>

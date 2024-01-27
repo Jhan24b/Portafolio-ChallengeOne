@@ -1,60 +1,34 @@
+import CardGrade from "./CardGrade";
+
 export default function Academic() {
-  const formation = [{title:'',subtitle:'',duration:'',img:''}]
+  const formation = [
+    {
+      title: "Specialization Front-End - React",
+      subtitle: "Meta",
+      duration: "En Curso",
+      img: "/Meta.png",
+    },
+    {
+      title: "Licenciatura en Ingeniería de Sistemas e Informática",
+      subtitle: "UTP",
+      duration: "En Curso",
+      img: "/utpLogo.png",
+    },
+    {
+      title: "Especializacion Front-End",
+      subtitle: "Oracle - Alura Latam",
+      duration: "2023",
+      img: "/aluraLogo.png",
+    },
+  ];
   return (
-    <section class="academic" id="formacion">
-      <h2 class="academic__title">Formación académica</h2>
-      <div class="academic__courses">
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            {/* <!-- Pon el logotipo de la institución de formación --> */}
-            <li class="academic__courses__item__img">
-              <img
-                class="academic__courses__item__img__content"
-                src="assets\ufpr_logo.png"
-              />
-            </li>
-            <li class="academic__courses__item__title">
-              <h4>Análisis de datos</h4>
-            </li>
-            <li class="academic__courses__item__subtitle">
-              <p>2018 - UFPR</p>
-            </li>
-          </ul>
-        </div>
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            {/* <!--Pon el logotipo de la institución de formación --> */}
-            <li class="academic__courses__item__img">
-              <img
-                class="academic__courses__item__img__content"
-                src="assets/aluraLogo.png"
-              />
-            </li>
-            <li class="academic__courses__item__title">
-              <h4>Especializacion Front-End</h4>
-            </li>
-            <li class="academic__courses__item__subtitle">
-              <p>En curso - Alura</p>
-            </li>
-          </ul>
-        </div>
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            {/* <!-- Pon el logotipo de la institución de formación --> */}
-            <li class="academic__courses__item__img">
-              <img
-                class="academic__courses__item__img__content"
-                src="assets/utpLogo.png"
-              />
-            </li>
-            <li class="academic__courses__item__title">
-              <h4>Licenciatura en Ingeniería de Sistemas e Informática</h4>
-            </li>
-            <li class="academic__courses__item__subtitle">
-              <p>En curso - UTP</p>
-            </li>
-          </ul>
-        </div>
+    <section className="max-w-6xl mx-auto text-center" id="formacion">
+      <h2 className="">Formación Académica</h2>
+
+      <div className="flex justify-center items-center flex-col md:flex-row gap-12 md:gap-8">
+        {formation.map((data, idx) => {
+          return <CardGrade key={idx} data={data} />;
+        })}
       </div>
     </section>
   );

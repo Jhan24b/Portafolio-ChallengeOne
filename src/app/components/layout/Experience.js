@@ -51,8 +51,8 @@ export default function Experience() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto text-center my-40 md:my-4" id="experience">
-      <h2 className="text-cerulean-blue-900 font-bold text-[36px] pt-12 pb-4">
+    <section className="max-w-6xl mx-auto text-center my-16 md:my-4" id="experience">
+      <h2 className="text-cerulean-blue-900 font-bold text-[36px] pt-12 pb-8">
         Experiencia Profesional
       </h2>
       {proyectos.map((proyecto, idx) => {

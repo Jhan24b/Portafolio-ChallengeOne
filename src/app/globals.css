@@ -47,3 +47,7 @@ a {
 a:hover {
   @apply text-astronaut-600;
 }
+
+h2{
+  @apply text-cerulean-blue-900 font-bold text-[36px] my-12;
+}
