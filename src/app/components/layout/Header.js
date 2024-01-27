@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="py-10 bg-astronaut-900">
+    <header className="py-10 bg-astronaut-900 px-4">
       <div className="max-w-4xl mx-auto flex grow text-lg font-semibold ">
         <h3 className="grow text-white">Anthony J. Torres</h3>
         <nav>

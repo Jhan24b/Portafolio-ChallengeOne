@@ -28,7 +28,7 @@ export default function CardExperience({ card }) {
           />
         </div>
       )}
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center my-4 mx-2">
         <h2 className="font-bold text-[24px] text-cerulean-blue-800 -mb-2">
           {title}
         </h2>
@@ -47,17 +47,15 @@ export default function CardExperience({ card }) {
         </div>
         <div className="flex justify-center items-center gap-12">
           {/* <!-- Pon el enlace del proyecto en Github o GithubPages --> */}
-          <button>
-            <Link href={urlRepository} target="_blank">
-              <Github className="w-10 h-10" />
-              Repositório
-            </Link>
-          </button>
-          <button>
-            <Link href={urlProduction} target="_blank">
-              <span>Ver demo</span>
-            </Link>
-          </button>
+
+          <Link href={urlRepository} target="_blank">
+            <Github className="w-10 h-10" />
+            Repositório
+          </Link>
+
+          <Link href={urlProduction} target="_blank">
+            <span>Ver demo</span>
+          </Link>
         </div>
       </div>
       {type === "cardinverted" && (

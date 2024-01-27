@@ -2,9 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+select,
+textarea,
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="text"] {
+  @apply block w-full mb-2 rounded-md;
+  @apply border p-2 border-astronaut-200 bg-astronaut-100;
+}
+
+label {
+  @apply text-gray-500 text-sm leading-tight;
+}
+
+label + input {
+  margin-top: -2px;
+}
+
 button {
-  @apply text-gray-700;
-  @apply flex px-2 py-1 gap-1;
+  @apply text-gray-700 font-medium;
+  @apply flex items-center bg-astronaut-100 border border-astronaut-700 text-astronaut-700 rounded-md px-2 py-1 gap-1 ;
 }
 
 div.about {
@@ -18,10 +36,14 @@ div.cardinverted {
 }
 
 div.card {
-  @apply block md:grid grid-cols-2 my-32;
+  @apply block md:grid grid-cols-2 my-32 mx-4;
   grid-template-columns: 0.65fr 0.35fr;
 }
 
 a {
-  @apply flex justify-center items-center;
+  @apply flex justify-center items-center gap-1 font-medium;
+}
+
+a:hover {
+  @apply text-astronaut-600;
 }
