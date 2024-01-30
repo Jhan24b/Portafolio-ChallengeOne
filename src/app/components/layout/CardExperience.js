@@ -30,12 +30,12 @@ export default function CardExperience({ card }) {
         </div>
       )}
       <div className="flex flex-col justify-center my-4 mx-2">
-        <h2 className="font-bold text-[24px] text-cerulean-blue-800 -mb-2">
+        <h3 className="font-bold text-[24px] text-cerulean-blue-800 -mb-2">
           {title}
-        </h2>
-        <h3 className="font-bold text-[16px] text-cerulean-blue-500 mb-6">
-          {subtitle}
         </h3>
+        <h4 className="font-bold text-[16px] text-cerulean-blue-500 mb-6">
+          {subtitle}
+        </h4>
         <div className="mb-8">
           <h3 className="font-bold text-[20px] text-cerulean-blue-900 mb-4">
             {role}

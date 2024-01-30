@@ -43,23 +43,23 @@ export default function Experience() {
       role: "Front End",
       tech: [HtmlLogo, Css, LogoJavaScript],
       img: "/decod_print.png",
-      urlRepository:
-        "https://github.com/Jhan24b/ChallengeOne",
-      urlProduction:
-        "https://jhan24b.github.io/ChallengeOne/",
+      urlRepository: "https://github.com/Jhan24b/ChallengeOne",
+      urlProduction: "https://jhan24b.github.io/ChallengeOne/",
     },
   ];
 
   return (
-    <section className="max-w-6xl mx-auto text-center my-16 md:my-4" id="experience">
-      <h2 className="text-cerulean-blue-900 font-bold text-[36px] pt-12 pb-8">
-        Experiencia Profesional
-      </h2>
-      {proyectos.map((proyecto, idx) => {
-        let type = "";
-        idx % 2 === 0 ? (type = "card") : (type = "cardinverted");
-        return <CardExperience key={idx} card={{ type, ...proyecto }} />;
-      })}
+    <section id="experience">
+      <div className="max-w-6xl mx-auto text-center my-16 md:my-4">
+        <h2 className="text-cerulean-blue-900 font-bold text-[36px]">
+          Experiencia Profesional
+        </h2>
+        {proyectos.map((proyecto, idx) => {
+          let type = "";
+          idx % 2 === 0 ? (type = "card") : (type = "cardinverted");
+          return <CardExperience key={idx} card={{ type, ...proyecto }} />;
+        })}
+      </div>
     </section>
   );
 }

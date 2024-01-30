@@ -12,6 +12,10 @@ input[type="text"] {
   @apply border p-2 border-astronaut-200 bg-astronaut-100;
 }
 
+section{
+  @apply bg-astronaut-100 rounded-md my-6;
+}
+
 label {
   @apply text-gray-500 text-sm leading-tight;
 }
@@ -31,12 +35,12 @@ div.about {
 }
 
 div.cardinverted {
-  @apply block md:grid grid-cols-2 my-8 md:my-32 mx-4;
+  @apply block md:grid grid-cols-2 py-8 md:py-16 mx-4;
   grid-template-columns: 0.35fr 0.65fr;
 }
 
 div.card {
-  @apply block md:grid grid-cols-2 my-8 md:my-32 mx-4;
+  @apply block md:grid grid-cols-2 py-8 md:py-16 mx-4;
   grid-template-columns: 0.65fr 0.35fr;
 }
 
@@ -49,5 +53,5 @@ a:hover {
 }
 
 h2{
-  @apply text-cerulean-blue-900 font-bold text-[36px] my-12;
+  @apply text-cerulean-blue-900 font-bold text-[36px] py-8;
 }

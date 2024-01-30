@@ -11,9 +11,9 @@ export default function CardGrade({ data }) {
           </div>
         </div>
         <div class="p-6">
-          <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-astronaut-950">
+          <h3 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-astronaut-950">
             {title}
-          </h5>
+          </h3>
           <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
             <b>{subtitle}</b> - {duration}
           </p>

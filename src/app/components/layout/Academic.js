@@ -22,13 +22,17 @@ export default function Academic() {
     },
   ];
   return (
-    <section className="max-w-6xl mx-auto text-center" id="formacion">
-      <h2 className="">Formación Académica</h2>
+    <section id="formacion">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="">Formación Académica</h2>
 
-      <div className="flex justify-center items-center flex-col md:flex-row gap-12 md:gap-8">
-        {formation.map((data, idx) => {
-          return <CardGrade key={idx} data={data} />;
-        })}
+        <div className="p-12">
+          <div className="flex justify-center items-center flex-col md:flex-row gap-12 md:gap-8">
+            {formation.map((data, idx) => {
+              return <CardGrade key={idx} data={data} />;
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );

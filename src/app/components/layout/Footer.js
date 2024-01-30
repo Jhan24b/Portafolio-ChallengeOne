@@ -10,19 +10,19 @@ export default function Footer() {
     <footer className="border-t p-8 text-center text-gray-500 mt-16">
       <div className="md:grid grid-cols-3 items-center">
         <div className="flex justify-center items-center gap-8 md:gap-24 ">
-          <Link href="https://github.com/Jhan24b">
+          <Link href="https://github.com/Jhan24b" aria-label="Link to github">
             <Github />
           </Link>
-          <Link href="https://www.linkedin.com/in/anthony-torres-13591b1b5/">
+          <Link href="https://www.linkedin.com/in/anthony-torres-13591b1b5/" aria-label="Link to linkedin">
             <Linkedin />
           </Link>
         </div>
         <div className="font-semibold">Developed by Anthony J. Torres</div>
-        <div className="flex justify-center items-center gap-8 md:gap-24 ">
+        <div className="flex justify-center items-center gap-8 md:gap-24 " aria-label="Link to instagram">
           <Link href="https://github.com/Jhan24b">
             <Instagram />
           </Link>
-          <Link href="https://www.linkedin.com/in/anthony-torres-13591b1b5/">
+          <Link href="https://www.linkedin.com/in/anthony-torres-13591b1b5/" aria-label="Link to facebook">
             <Facebook />
           </Link>
         </div>
