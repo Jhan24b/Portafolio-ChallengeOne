@@ -6,7 +6,7 @@ export default function Academic() {
       title: "Specialization Front-End - React",
       subtitle: "Meta",
       duration: "En Curso",
-      img: "/Meta.png",
+      img: "/metaLogo.png",
     },
     {
       title: "Licenciatura en Ingeniería de Sistemas e Informática",
