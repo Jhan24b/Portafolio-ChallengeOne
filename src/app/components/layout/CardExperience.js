@@ -17,7 +17,6 @@ export default function CardExperience({ card }) {
 
   return (
     <div className={type}>
-      {/* <!-- Pon el logotipo/captura de pantalla de tu proyecto --> */}
       {type === "card" && (
         <div className="flex justify-center">
           <Image
@@ -30,14 +29,14 @@ export default function CardExperience({ card }) {
         </div>
       )}
       <div className="flex flex-col justify-center my-4 mx-2">
-        <h3 className="font-bold text-[24px] text-cerulean-blue-800 -mb-2">
+        <h3 className="font-bold text-[24px] text-cerulean-blue-900 -mb-2">
           {title}
         </h3>
-        <h4 className="font-bold text-[16px] text-cerulean-blue-500 mb-6">
+        <h4 className="font-bold text-[16px] text-cerulean-blue-800 mb-6">
           {subtitle}
         </h4>
         <div className="mb-8">
-          <h3 className="font-bold text-[20px] text-cerulean-blue-900 mb-4">
+          <h3 className="font-bold text-[20px] text-astronaut-700 mb-4">
             {role}
           </h3>
           <div className="flex justify-center gap-3">

@@ -17,7 +17,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto my-16">
         <div className="md:flex gap-8">
           <div className="flex flex-col justify-center max-w-96 mx-16">
-            <h2 className="text-astronaut-700 text-[32px] font-medium pb-4">
+            <h2 className="text-astronaut-700 text-[32px] font-medium">
               Necesitas un prospecto?
             </h2>
             <span className="text-[18px]">

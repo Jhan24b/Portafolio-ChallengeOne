@@ -17,7 +17,7 @@ section{
 }
 
 label {
-  @apply text-gray-500 text-sm leading-tight;
+  @apply text-gray-600 text-sm leading-tight font-medium;
 }
 
 label + input {
