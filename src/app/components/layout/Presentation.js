@@ -30,7 +30,7 @@ export default function Presentation() {
               por la tecnología y la programación me ha llevado a especializarme
               en el desarrollo de aplicaciones mobiles y web.
             </span>
-            <div className="flex gap-8 mx-4 my-2 justify-center items-center flex-wrap">
+            <div className="flex gap-8 mx-4 my-4 justify-center items-center flex-wrap">
               <Link className="" href="https://github.com/Jhan24b">
                 <Github className="w-10 h-10" />
                 Github

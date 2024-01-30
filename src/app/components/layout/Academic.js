@@ -3,7 +3,7 @@ import CardGrade from "./CardGrade";
 export default function Academic() {
   const formation = [
     {
-      title: "Specialization Front-End - React",
+      title: "Front-End - React",
       subtitle: "Meta",
       duration: "En Curso",
       img: "/metaLogo.png",
@@ -20,6 +20,12 @@ export default function Academic() {
       duration: "2023",
       img: "/aluraLogo.png",
     },
+    {
+      title: "Google IT Support",
+      subtitle: "Google",
+      duration: "2023",
+      img: "/googleLogo.png",
+    },
   ];
   return (
     <section id="formacion">
@@ -27,7 +33,7 @@ export default function Academic() {
         <h2 className="">Formación Académica</h2>
 
         <div className="p-12">
-          <div className="flex justify-center items-center flex-col md:flex-row gap-12 md:gap-8">
+          <div className="flex justify-center items-center flex-col md:flex-row gap-12 md:gap-8 flex-wrap">
             {formation.map((data, idx) => {
               return <CardGrade key={idx} data={data} />;
             })}
