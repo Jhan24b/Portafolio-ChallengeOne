@@ -18,8 +18,8 @@ export default function Footer() {
           </Link>
         </div>
         <div className="font-semibold">Developed by Anthony J. Torres</div>
-        <div className="flex justify-center items-center gap-8 md:gap-24 " aria-label="Link to instagram">
-          <Link href="https://github.com/Jhan24b">
+        <div className="flex justify-center items-center gap-8 md:gap-24 ">
+          <Link href="https://github.com/Jhan24b" aria-label="Link to instagram">
             <Instagram />
           </Link>
           <Link href="https://www.linkedin.com/in/anthony-torres-13591b1b5/" aria-label="Link to facebook">
