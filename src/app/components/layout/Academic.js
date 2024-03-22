@@ -5,7 +5,7 @@ export default function Academic() {
     {
       title: "Front-End - React",
       subtitle: "Meta",
-      duration: "En Curso",
+      duration: "2024",
       img: "/metaLogo.png",
     },
     {

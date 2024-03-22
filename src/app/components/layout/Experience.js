@@ -11,6 +11,15 @@ import CardExperience from "./CardExperience";
 export default function Experience() {
   const proyectos = [
     {
+      title: "Auth Page",
+      subtitle: "Pyyes - Auth",
+      role: "Full Stack",
+      tech: [Next, Mongo, Tailwind],
+      img: "/authpyyes.png",
+      urlRepository: "https://github.com/Jhan24b/AuthPyees",
+      urlProduction: "https://authpyees.vercel.app",
+    },
+    {
       title: "Ordering App",
       subtitle: "Pyyes - Bakery",
       role: "Full Stack",
