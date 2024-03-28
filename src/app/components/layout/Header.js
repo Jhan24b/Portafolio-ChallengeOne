@@ -23,8 +23,8 @@ export default function Header() {
         <div className="md:hidden p-4 bg-astronaut-100 rounded-lg mt-4 gap-4">
           <nav className="gap-8 text-lg">
             <Link href="#about">Sobre mi</Link>
-            <Link href="#skills">Skills</Link>
-            <Link href="#hobbies">Hobbies</Link>
+            {/* <Link href="#skills">Skills</Link>
+            <Link href="#hobbies">Hobbies</Link> */}
             <Link href="#formacion">Formación</Link>
             <Link href="#experience">Proyectos</Link>
             <Link href="#contact">Contacto</Link>
