@@ -13,7 +13,7 @@ export default function Presentation() {
           <div className="flex justify-center">
             <Image
               className="my-4"
-              src="/profile.png"
+              src="/profile.jpg"
               alt="profile"
               width="200"
               height="200"
