@@ -15,8 +15,8 @@ export default function Python({ className = "w-12 h-12" }) {
         y2="26.277"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#26abe7"></stop>
-        <stop offset="1" stop-color="#086dbf"></stop>
+        <stop offset="0" stopColor="#26abe7"></stop>
+        <stop offset="1" stopColor="#086dbf"></stop>
       </linearGradient>
       <path
         fill="url(#goqfu1ZNmEnUrQDJEQ1bUa_l75OEUJkPAk4_gr1)"
@@ -30,8 +30,8 @@ export default function Python({ className = "w-12 h-12" }) {
         y2="21.034"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#feb705"></stop>
-        <stop offset="1" stop-color="#ffda1c"></stop>
+        <stop offset="0" stopColor="#feb705"></stop>
+        <stop offset="1" stopColor="#ffda1c"></stop>
       </linearGradient>
       <path
         fill="url(#goqfu1ZNmEnUrQDJEQ1bUb_l75OEUJkPAk4_gr2)"

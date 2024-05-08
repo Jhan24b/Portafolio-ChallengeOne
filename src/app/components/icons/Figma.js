@@ -15,9 +15,9 @@ export default function Figma({ className = "w-12 h-12" }) {
         y2="19.546"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f44f5a"></stop>
-        <stop offset=".443" stop-color="#ee3d4a"></stop>
-        <stop offset="1" stop-color="#e52030"></stop>
+        <stop offset="0" stopColor="#f44f5a"></stop>
+        <stop offset=".443" stopColor="#ee3d4a"></stop>
+        <stop offset="1" stopColor="#e52030"></stop>
       </linearGradient>
       <path
         fill="url(#q17mbB32E_FbIzPpfjq_Ta_W0YEwBDDfTeu_gr1)"
@@ -31,8 +31,8 @@ export default function Figma({ className = "w-12 h-12" }) {
         y2="32.971"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ae4cd5"></stop>
-        <stop offset="1" stop-color="#9331bf"></stop>
+        <stop offset="0" stopColor="#ae4cd5"></stop>
+        <stop offset="1" stopColor="#9331bf"></stop>
       </linearGradient>
       <path
         fill="url(#q17mbB32E_FbIzPpfjq_Tb_W0YEwBDDfTeu_gr2)"
@@ -46,8 +46,8 @@ export default function Figma({ className = "w-12 h-12" }) {
         y2="45.617"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#33c481"></stop>
-        <stop offset="1" stop-color="#21a366"></stop>
+        <stop offset="0" stopColor="#33c481"></stop>
+        <stop offset="1" stopColor="#21a366"></stop>
       </linearGradient>
       <path
         fill="url(#q17mbB32E_FbIzPpfjq_Tc_W0YEwBDDfTeu_gr3)"
@@ -61,8 +61,8 @@ export default function Figma({ className = "w-12 h-12" }) {
         y2="18.702"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f09ca2"></stop>
-        <stop offset="1" stop-color="#eb6773"></stop>
+        <stop offset="0" stopColor="#f09ca2"></stop>
+        <stop offset="1" stopColor="#eb6773"></stop>
       </linearGradient>
       <path
         fill="url(#q17mbB32E_FbIzPpfjq_Td_W0YEwBDDfTeu_gr4)"
@@ -76,8 +76,8 @@ export default function Figma({ className = "w-12 h-12" }) {
         y2="31.85"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#32bdef"></stop>
-        <stop offset="1" stop-color="#1ea2e4"></stop>
+        <stop offset="0" stopColor="#32bdef"></stop>
+        <stop offset="1" stopColor="#1ea2e4"></stop>
       </linearGradient>
       <circle
         cx="32"

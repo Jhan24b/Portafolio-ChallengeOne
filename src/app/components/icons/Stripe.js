@@ -16,8 +16,8 @@ export default function Stripe({ className = "w-12 h-12" }) {
         gradientTransform="matrix(1 0 0 -1 0 -154)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#00b3ee"></stop>
-        <stop offset="1" stop-color="#0082d8"></stop>
+        <stop offset="0" stopColor="#00b3ee"></stop>
+        <stop offset="1" stopColor="#0082d8"></stop>
       </linearGradient>
       <path
         fill="url(#PYSOqyBwdc8Fg7jFp5VlLa_vArWbbq0EbTM_gr1)"

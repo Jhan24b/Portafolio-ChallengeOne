@@ -15,8 +15,8 @@ export default function Tailwind({ className = "w-12 h-12" }) {
         y2="36.552"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#00c1e0"></stop>
-        <stop offset="1" stop-color="#009bb8"></stop>
+        <stop offset="0" stopColor="#00c1e0"></stop>
+        <stop offset="1" stopColor="#009bb8"></stop>
       </linearGradient>
       <path
         fill="url(#iOmQfjoCC4Hw6zVwRjSDha_x7XMNGh2vdqA_gr1)"

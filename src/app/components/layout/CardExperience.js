@@ -46,11 +46,10 @@ export default function CardExperience({ card }) {
           </div>
         </div>
         <div className="flex justify-center items-center gap-12">
-          {/* <!-- Pon el enlace del proyecto en Github o GithubPages --> */}
 
           <Link href={urlRepository} target="_blank">
             <Github className="w-10 h-10" />
-            Repositório
+            Repositorio
           </Link>
 
           <Link href={urlProduction} target="_blank">

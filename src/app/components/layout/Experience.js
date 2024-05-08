@@ -1,3 +1,5 @@
+"use client";
+
 import Css from "../icons/Css";
 import HtmlLogo from "../icons/HtmlLogo";
 import Mongo from "../icons/Mongo";
@@ -7,8 +9,10 @@ import Stripe from "../icons/Stripe";
 import Tailwind from "../icons/Tailwind";
 import LogoJavaScript from "../icons/LogoJavaScript";
 import CardExperience from "./CardExperience";
-
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { useState } from "react";
 export default function Experience() {
+  const [filter, setFilter] = useState("");
   const proyectos = [
     {
       title: "Auth Page",
@@ -63,6 +67,7 @@ export default function Experience() {
         <h2 className="text-cerulean-blue-900 font-bold text-[36px]">
           Experiencia Profesional
         </h2>
+
         {proyectos.map((proyecto, idx) => {
           let type = "";
           idx % 2 === 0 ? (type = "card") : (type = "cardinverted");

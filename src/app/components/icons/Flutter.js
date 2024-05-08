@@ -14,13 +14,13 @@ export default function Flutter({ className = "w-12 h-12" }) {
       y2="34.223"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#0176d0"></stop>
-      <stop offset=".454" stop-color="#0275ce"></stop>
-      <stop offset=".617" stop-color="#0472c7"></stop>
-      <stop offset=".733" stop-color="#076bbc"></stop>
-      <stop offset=".827" stop-color="#0d63ab"></stop>
-      <stop offset=".907" stop-color="#135895"></stop>
-      <stop offset=".933" stop-color="#16538c"></stop>
+      <stop offset="0" stopColor="#0176d0"></stop>
+      <stop offset=".454" stopColor="#0275ce"></stop>
+      <stop offset=".617" stopColor="#0472c7"></stop>
+      <stop offset=".733" stopColor="#076bbc"></stop>
+      <stop offset=".827" stopColor="#0d63ab"></stop>
+      <stop offset=".907" stopColor="#135895"></stop>
+      <stop offset=".933" stopColor="#16538c"></stop>
     </linearGradient>
     <polygon
       fill="url(#gFTOxFpGMtrTwKmyJmDVma_pCvIfmctRaY8_gr1)"

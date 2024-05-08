@@ -15,11 +15,11 @@ export default function Swift({ className = "w-12 h-12" }) {
         y2="42.282"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#fba62d"></stop>
-        <stop offset=".174" stop-color="#fc8e2c"></stop>
-        <stop offset=".548" stop-color="#fe602a"></stop>
-        <stop offset=".835" stop-color="#ff4329"></stop>
-        <stop offset="1" stop-color="#ff3829"></stop>
+        <stop offset="0" stopColor="#fba62d"></stop>
+        <stop offset=".174" stopColor="#fc8e2c"></stop>
+        <stop offset=".548" stopColor="#fe602a"></stop>
+        <stop offset=".835" stopColor="#ff4329"></stop>
+        <stop offset="1" stopColor="#ff3829"></stop>
       </linearGradient>
       <path
         fill="url(#4SZycE1EPntPg_vaQEuHCa_XH8DlMsSOmWT_gr1)"
@@ -33,10 +33,10 @@ export default function Swift({ className = "w-12 h-12" }) {
         y2="26.426"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#faa53d"></stop>
-        <stop offset=".438" stop-color="#e17a2f"></stop>
-        <stop offset=".795" stop-color="#d15d26"></stop>
-        <stop offset="1" stop-color="#cb5223"></stop>
+        <stop offset="0" stopColor="#faa53d"></stop>
+        <stop offset=".438" stopColor="#e17a2f"></stop>
+        <stop offset=".795" stopColor="#d15d26"></stop>
+        <stop offset="1" stopColor="#cb5223"></stop>
       </linearGradient>
       <path
         fill="url(#4SZycE1EPntPg_vaQEuHCb_XH8DlMsSOmWT_gr2)"
