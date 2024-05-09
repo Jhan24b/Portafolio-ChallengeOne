@@ -10,13 +10,7 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 export const metadata = {
   title: "Anthony Torres",
   description: "My portfolio",
-  icons: [
-    {
-      src: "public/icono.jpeg",
-      sizes: "any",
-      type: "image/x-icon",
-    },
-  ],
+  keywords: ["Anthony Torres", "portfolio", "web developer", "react developer", "projects", "skills"],
 };
 
 export default function RootLayout({ children }) {
