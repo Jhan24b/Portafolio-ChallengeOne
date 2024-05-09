@@ -21,14 +21,13 @@ export default function Presentation() {
           </div>
           <div className="mx-2">
             <div className="font-semibold text-cerulean-blue-900 my-8 text-[24px] ">
-              Hola, soy Anthony J. Torres, Desarrollador Web Full Stack -
-              Programador Mobile
+              Hola, soy Anthony J. Torres, Software Engineer
             </div>
             <span className="py-2 text-lg">
               ¡Saludos! Soy un estudiante apasionado de Ingeniería de Sistemas e
               Informática en la Universidad Tecnológica del Perú. Mi fascinación
               por la tecnología y la programación me ha llevado a especializarme
-              en el desarrollo de aplicaciones mobiles y web.
+              en el desarrollo de software.
             </span>
             <div className="flex gap-8 mx-4 my-4 justify-center items-center flex-wrap">
               <Link className="" href="https://github.com/Jhan24b">

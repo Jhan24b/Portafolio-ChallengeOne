@@ -11,6 +11,7 @@ import LogoJavaScript from "../icons/LogoJavaScript";
 import CardExperience from "./CardExperience";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useState } from "react";
+import Link from "next/link";
 export default function Experience() {
   const [filter, setFilter] = useState("");
   const proyectos = [
@@ -67,12 +68,29 @@ export default function Experience() {
         <h2 className="text-cerulean-blue-900 font-bold text-[36px]">
           Experiencia Profesional
         </h2>
+        <div className="flex justify-center gap-4">
+          <a onClick={() => setFilter("Front End")}>Front End</a>
+          <a onClick={() => setFilter("Full Stack")}>Full Stack</a>
+          <a onClick={() => setFilter("")}>Todos</a>
+        </div>
 
-        {proyectos.map((proyecto, idx) => {
-          let type = "";
-          idx % 2 === 0 ? (type = "card") : (type = "cardinverted");
-          return <CardExperience key={idx} card={{ type, ...proyecto }} />;
-        })}
+        {filter === "" &&
+          proyectos.map((proyecto, idx) => {
+            let type = "";
+            idx % 2 === 0 ? (type = "card") : (type = "cardinverted");
+            return <CardExperience key={idx} card={{ type, ...proyecto }} />;
+          })}
+
+        {filter !== "" &&
+          proyectos
+            .filter((proy) => {
+              return proy.role === filter;
+            })
+            .map((proyecto, idx) => {
+              let type = "";
+              idx % 2 === 0 ? (type = "card") : (type = "cardinverted");
+              return <CardExperience key={idx} card={{ type, ...proyecto }} />;
+            })}
       </div>
     </section>
   );
