@@ -33,6 +33,11 @@ export default function Academic() {
       subtitle: "Google",
       duration: "2023",
       img: "/googleLogo.png",
+    },{
+      title: "Python for Everybody",
+      subtitle: "University of Michigan",
+      duration: "2022",
+      img: "/Umich.png",
     },
   ];
   return (
