@@ -9,8 +9,14 @@ import Stripe from "../icons/Stripe";
 import Tailwind from "../icons/Tailwind";
 import LogoJavaScript from "../icons/LogoJavaScript";
 import CardExperience from "./CardExperience";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useState } from "react";
+
+function renderProjects(filteredProjects) {
+  return filteredProjects.map((proyecto, idx) => {
+    const type = idx % 2 === 0 ? "card" : "cardinverted";
+    return <CardExperience key={idx} card={{ type, ...proyecto }} />;
+  });
+}
 
 export default function Experience() {
   const [filter, setFilter] = useState("");
@@ -61,6 +67,10 @@ export default function Experience() {
       urlProduction: "https://jhan24b.github.io/ChallengeOne/",
     },
   ];
+  const filteredProjects =
+    filter === ""
+      ? proyectos
+      : proyectos.filter((proy) => proy.role === filter);
 
   return (
     <section id="experience">
@@ -69,28 +79,12 @@ export default function Experience() {
           Experiencia Profesional
         </h2>
         <div className="flex justify-center gap-4">
-          <a onClick={() => setFilter("Front End")}>Front End</a>
-          <a onClick={() => setFilter("Full Stack")}>Full Stack</a>
-          <a onClick={() => setFilter("")}>Todos</a>
+          <button onClick={() => setFilter("")}>Todos</button>
+          <button onClick={() => setFilter("Front End")}>Front End</button>
+          <button onClick={() => setFilter("Full Stack")}>Full Stack</button>
         </div>
 
-        {filter === "" &&
-          proyectos.map((proyecto, idx) => {
-            let type = "";
-            idx % 2 === 0 ? (type = "card") : (type = "cardinverted");
-            return <CardExperience key={idx} card={{ type, ...proyecto }} />;
-          })}
-
-        {filter !== "" &&
-          proyectos
-            .filter((proy) => {
-              return proy.role === filter;
-            })
-            .map((proyecto, idx) => {
-              let type = "";
-              idx % 2 === 0 ? (type = "card") : (type = "cardinverted");
-              return <CardExperience key={idx} card={{ type, ...proyecto }} />;
-            })}
+        {renderProjects(filteredProjects)}
       </div>
     </section>
   );

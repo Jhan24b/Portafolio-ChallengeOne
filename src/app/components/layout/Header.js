@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useCallback, useState } from "react";
 import MenuIcon from "../icons/MenuIcon";
 import Nav from "./Nav";
