@@ -4,7 +4,7 @@ export default function CardGrade({ data }) {
   const { title, subtitle, duration, img } = data;
   return (
     <div className="my-4">
-      <div className="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative flex w-80 h-[260px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600 flex justify-center items-center">
           <div className="flex justify-center items-center">
             <Image src={img} width={200} height={80} alt={title} />
