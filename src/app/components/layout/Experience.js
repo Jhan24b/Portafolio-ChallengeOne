@@ -11,7 +11,7 @@ import LogoJavaScript from "../icons/LogoJavaScript";
 import CardExperience from "./CardExperience";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useState } from "react";
-import Link from "next/link";
+
 export default function Experience() {
   const [filter, setFilter] = useState("");
   const proyectos = [

@@ -20,9 +20,9 @@ export default function Presentation() {
             />
           </div>
           <div className="mx-2">
-            <div className="font-semibold text-cerulean-blue-900 my-8 text-[24px] ">
-              Hola, soy Anthony J. Torres, Software Engineer
-            </div>
+            <h1 className="font-semibold text-cerulean-blue-900 my-6 text-[32px] ">
+              Hola, soy Anthony J. Torres, <br/>Software Engineer
+            </h1>
             <span className="py-2 text-lg">
               ¡Saludos! Soy un estudiante apasionado de Ingeniería de Sistemas e
               Informática en la Universidad Tecnológica del Perú. Mi fascinación
