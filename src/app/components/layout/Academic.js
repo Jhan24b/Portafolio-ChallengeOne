@@ -1,5 +1,23 @@
 import CardGrade from "./CardGrade";
 
+function renderCards(cards){
+  return cards.map((card, idx) => {
+    return <CardGrade key={idx} data={card} />;
+  })
+}
+
+function EducationSection({ title, items }) {
+  return (
+    <div>
+      <h3 className="text-cerulean-blue-800 font-bold text-[30px]">{title}</h3>
+      <div className="p-12">
+        <div className="flex justify-center items-center flex-col md:flex-row gap-12 md:gap-8 flex-wrap">
+          {renderCards(items)}
+        </div>
+      </div>
+    </div>
+  );
+}
 export default function Academic() {
   const grades = [
     {
@@ -15,6 +33,7 @@ export default function Academic() {
       img: "/aluraLogo.png",
     },
   ];
+
   const specialization = [
     {
       title: "Front-End - React",
@@ -40,11 +59,14 @@ export default function Academic() {
       img: "/Umich.png",
     },
   ];
+
   return (
     <section id="formacion">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="">Formación Académica</h2>
-        <h3 className="text-cerulean-blue-800 font-bold text-[30px]">Grados</h3>
+        <EducationSection title="Grados" items={grades} />
+        <EducationSection title="Especializaciones" items={specialization} />
+        {/* <h3 className="text-cerulean-blue-800 font-bold text-[30px]">Grados</h3>
         <div className="p-12">
           <div className="flex justify-center items-center flex-col md:flex-row gap-12 md:gap-8 flex-wrap">
             {grades.map((data, idx) => {
@@ -59,7 +81,7 @@ export default function Academic() {
               return <CardGrade key={idx} data={data} />;
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
