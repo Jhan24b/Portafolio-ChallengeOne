@@ -10,6 +10,9 @@ import Tailwind from "../icons/Tailwind";
 import LogoJavaScript from "../icons/LogoJavaScript";
 import CardExperience from "./CardExperience";
 import { useState } from "react";
+import ViteIcon from "../icons/ViteIcon";
+import SocketIoIcon from "../icons/SocketIoIcon";
+import TypeScripIcon from "../icons/TypeScripIcon";
 
 function renderProjects(filteredProjects) {
   return filteredProjects.map((proyecto, idx) => {
@@ -25,7 +28,7 @@ export default function Experience() {
       title: "Chat App",
       subtitle: "ChatMe",
       role: "Full Stack",
-      tech: [React, Tailwind], //vite, socketio
+      tech: [React, Tailwind, LogoJavaScript, SocketIoIcon, ViteIcon], //vite, socketio
       img: "/chatMe.png",
       urlRepository: "https://github.com/Jhan24b/AuthPyees",
       urlProduction: "https://chatme-fxip.onrender.com",
@@ -33,7 +36,7 @@ export default function Experience() {
       title: "Auth Page",
       subtitle: "Pyyes - Auth",
       role: "Full Stack",
-      tech: [Next, Mongo, Tailwind],
+      tech: [Next, TypeScripIcon, Mongo, Tailwind],
       img: "/authpyyes.png",
       urlRepository: "https://github.com/Jhan24b/AuthPyees",
       urlProduction: "https://authpyees.vercel.app",
