@@ -22,6 +22,14 @@ export default function Experience() {
   const [filter, setFilter] = useState("");
   const proyectos = [
     {
+      title: "Chat App",
+      subtitle: "ChatMe",
+      role: "Full Stack",
+      tech: [React, Tailwind], //vite, socketio
+      img: "/chatMe.png",
+      urlRepository: "https://github.com/Jhan24b/AuthPyees",
+      urlProduction: "https://chatme-fxip.onrender.com",
+    },{
       title: "Auth Page",
       subtitle: "Pyyes - Auth",
       role: "Full Stack",
