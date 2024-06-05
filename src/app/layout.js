@@ -10,7 +10,7 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 export const metadata = {
   title: "Anthony Torres",
   description: "My portfolio",
-  keywords: ["Anthony Torres", "portfolio", "web developer", "react developer", "projects", "skills"],
+  keywords: ["Anthony Torres", "portfolio", "Software Developer", "web developer", "react developer", "projects", "skills"],
 };
 
 export default function RootLayout({ children }) {

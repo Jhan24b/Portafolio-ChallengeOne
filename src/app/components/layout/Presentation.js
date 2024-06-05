@@ -21,7 +21,8 @@ export default function Presentation() {
           </div>
           <div className="mx-2">
             <h1 className="font-semibold text-cerulean-blue-900 my-6 text-[32px] ">
-              Hola, soy Anthony J. Torres, <br/>Software Engineer
+              Hola, soy Anthony J. Torres, <br />
+              Full Stack (MERN) - Software Engineer
             </h1>
             <span className="py-2 text-lg">
               ¡Saludos! Soy un estudiante apasionado de Ingeniería de Sistemas e
@@ -30,27 +31,27 @@ export default function Presentation() {
               en el desarrollo de software.
             </span>
             <div className="flex gap-8 mx-4 my-4 justify-center items-center flex-wrap">
-              <Link className="" href="https://github.com/Jhan24b">
+              <Link href="https://github.com/Jhan24b" target="_blank">
                 <Github className="w-10 h-10" />
                 Github
               </Link>
 
               <Link
-                className=""
                 href="https://www.linkedin.com/in/anthony-torres-13591b1b5/"
+                target="_blank"
               >
                 <Linkedin className="w-10 h-10" />
                 Linkedin
               </Link>
 
-              <Link className="" href="https://www.instagram.com">
+              <Link href="https://www.instagram.com" target="_blank">
                 <Instagram className="w-10 h-10" />
                 Instagram
               </Link>
 
               <Link
-                className=""
-                href="https://www.linkedin.com/in/anthony-torres-13591b1b5/"
+                href="https://drive.google.com/file/d/1iUK3s8E9MtCxCvRxYM6Kau5sjUr0vUIK/view?usp=sharing"
+                target="_blank"
               >
                 <Download className="w-8 h-8" />
                 Currículo
