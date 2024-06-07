@@ -126,7 +126,7 @@ a {
 }
 
 a:hover {
-  @apply text-astronaut-500;
+  @apply text-astronaut-500 dark:text-astronaut-200;
 }
 
 h2 {

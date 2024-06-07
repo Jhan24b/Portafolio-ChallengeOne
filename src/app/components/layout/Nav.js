@@ -14,7 +14,7 @@ export default function Nav({ handleChangeTheme }) {
         <div onClick={handleChangeTheme}>
           <Bulb />
         </div>
-        <div> ENG</div>
+        <div>ESP</div>
       </div>
     </nav>
   );
