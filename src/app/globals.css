@@ -112,12 +112,12 @@ div.about {
 }
 
 div.cardinverted {
-  @apply block md:grid grid-cols-2 py-8 md:py-16 mx-4;
+  @apply block md:grid grid-cols-2 py-8 md:py-16 mx-4 md:mx-8 md:px-4 dark:bg-mercury-600 dark:rounded-xl;
   grid-template-columns: 0.35fr 0.65fr;
 }
 
 div.card {
-  @apply block md:grid grid-cols-2 py-8 md:py-16 mx-4;
+  @apply block md:grid grid-cols-2 py-8 md:py-16 md:mx-8 md:px-4 mx-4 dark:bg-mercury-600 dark:rounded-xl;
   grid-template-columns: 0.65fr 0.35fr;
 }
 

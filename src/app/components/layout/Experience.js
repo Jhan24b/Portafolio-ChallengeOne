@@ -85,8 +85,8 @@ export default function Experience() {
 
   return (
     <section id="experience">
-      <div className="max-w-6xl mx-auto text-center my-16 md:my-4">
-        <h2 className="text-cerulean-blue-900 font-bold text-[36px]">
+      <div className="max-w-6xl mx-auto text-center my-16 md:my-4 flex flex-col gap-4 pb-4">
+        <h2 className="text-cerulean-blue-900 dark:text-astronaut-50 font-bold text-[36px]">
           Experiencia Profesional
         </h2>
         <div className="flex justify-center gap-4">

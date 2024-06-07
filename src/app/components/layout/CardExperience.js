@@ -29,14 +29,14 @@ export default function CardExperience({ card }) {
         </div>
       )}
       <div className="flex flex-col justify-center my-4 mx-2">
-        <h3 className="font-bold text-[24px] text-cerulean-blue-900 -mb-2">
+        <h3 className="font-bold text-[24px] text-astronaut-800 dark:text-astronaut-200 -mb-2">
           {title}
         </h3>
-        <h4 className="font-bold text-[16px] text-cerulean-blue-800 mb-6">
+        <h4 className="font-bold text-[16px] text-astronaut-700 dark:text-astronaut-100 mb-6">
           {subtitle}
         </h4>
         <div className="mb-8">
-          <h3 className="font-bold text-[20px] text-astronaut-700 mb-4">
+          <h3 className="font-bold text-[20px] text-astronaut-700 dark:text-astronaut-50 mb-4">
             {role}
           </h3>
           <div className="flex justify-center gap-3">
@@ -47,12 +47,12 @@ export default function CardExperience({ card }) {
         </div>
         <div className="flex justify-center items-center gap-12">
 
-          <Link href={urlRepository} target="_blank">
+          <Link href={urlRepository} target="_blank" className="dark:hover:text-astronaut-100">
             <Github className="w-10 h-10" />
             Repositorio
           </Link>
 
-          <Link href={urlProduction} target="_blank">
+          <Link href={urlProduction} target="_blank" className="dark:hover:text-astronaut-100">
             <span>Ver demo</span>
             <Plane className="w-7 h-7"/>
           </Link>
