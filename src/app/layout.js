@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={roboto.className}>
-        <main className="bg-mercury-50">
+        <main className="bg-mercury-50 dark:bg-mercury-950">
           {/* <AppProvider> */}
           {/* <Toaster /> */}
           <Header />

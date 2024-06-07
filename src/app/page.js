@@ -5,6 +5,7 @@ import AboutMe from "./components/layout/AboutMe";
 import Presentation from "./components/layout/Presentation";
 
 export default function Home() {
+
   return (
     <>
       <Presentation />
@@ -15,7 +16,7 @@ export default function Home() {
 
       {/* <AboutMe/> */}
 
-      {/* <Contact /> */}
+      <Contact />
     </>
   );
 }

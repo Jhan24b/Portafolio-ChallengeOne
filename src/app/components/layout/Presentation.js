@@ -13,14 +13,14 @@ export default function Presentation() {
           <div className="flex justify-center">
             <Image
               className="my-4"
-              src="/profile.jpg"
+              src="/profile.png"
               alt="profile"
               width="200"
               height="200"
             />
           </div>
           <div className="mx-2">
-            <h1 className="font-semibold text-cerulean-blue-900 my-6 text-[32px] ">
+            <h1 className="font-semibold text-astronaut-900 dark:text-astronaut-100 my-6 text-[32px] ">
               Hola, soy Anthony J. Torres, <br />
               Full Stack (MERN) - Software Engineer
             </h1>

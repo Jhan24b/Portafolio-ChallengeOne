@@ -86,7 +86,7 @@ input[type="text"] {
 }
 
 section {
-  @apply bg-mercury-100 rounded-md my-6;
+  @apply bg-mercury-100 dark:bg-mercury-800 rounded-md my-6;
 }
 
 label {

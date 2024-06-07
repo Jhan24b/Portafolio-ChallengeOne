@@ -1,26 +1,39 @@
 "use client";
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import MenuIcon from "../icons/MenuIcon";
 import Nav from "./Nav";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
+
   const toggleNav = useCallback(() => {
     setNavOpen((prevNavOpen) => !prevNavOpen);
   }, []);
 
+  useEffect(() => {
+    if (theme === "dark") {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleChangeTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   return (
-    <header className="py-8 bg-astronaut-900 px-4">
+    <header className="py-8 bg-astronaut-500 dark:bg-astronaut-900 px-4">
       <div className="md:hidden max-w-4xl mx-auto flex grow text-lg font-semibold text-white">
-        <h3 className="grow text-white">Anthony J. Torres</h3>
+        <h3 className="grow text-astronaut-100 dark:text-white">Anthony J. Torres</h3>
         <button onClick={toggleNav} aria-label="Toggle navigation">
           <MenuIcon />
         </button>
       </div>
       {navOpen && (
         <div className="md:hidden p-4 bg-astronaut-100 rounded-lg mt-4 gap-4">
-          <Nav />
+          <Nav handleChangeTheme={handleChangeTheme}/>
         </div>
       )}
 
@@ -35,7 +48,7 @@ export default function Header() {
           ></Image>
           <h3 className="grow text-white">Anthony J. Torres</h3>
         </div>
-        <Nav />
+        <Nav handleChangeTheme={handleChangeTheme}/>
       </div>
     </header>
   );

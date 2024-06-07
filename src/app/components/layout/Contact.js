@@ -13,10 +13,14 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact">
-      <div className="max-w-4xl mx-auto my-16">
-        <div className="md:flex gap-8">
-          <div className="flex flex-col justify-center max-w-96 mx-16">
+    // <section id="contact">
+      <div className="max-w-4xl mx-auto my-16 flex justify-center" id="contact">
+        <div className="flex justify-center flex-col items-center gap-2 py-4 w-[480px] h-[240px] bg-white rounded-3xl">
+        {/* <div className="md:flex gap-8"> */}
+          <h3 className="text-3xl py-4 font-bold text-cerulean-blue-900">Contacto</h3>
+          <p>Puedes enviarme un correo a:</p>
+          <p className="text-astronaut-700 font-bold text-xl">jhan24b@gmail.com</p>
+          {/* <div className="flex flex-col justify-center max-w-96 mx-16">
             <h2 className="text-astronaut-700 text-[32px] font-medium">
               Necesitas un prospecto?
             </h2>
@@ -85,9 +89,9 @@ export default function Contact() {
                 </button>
               </div>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
-    </section>
+    // </section>
   );
 }
