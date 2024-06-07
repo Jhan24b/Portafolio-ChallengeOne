@@ -13,13 +13,17 @@ export default function Contact() {
   }
 
   return (
-    // <section id="contact">
-      <div className="max-w-4xl mx-auto my-16 flex justify-center" id="contact">
-        <div className="flex justify-center flex-col items-center gap-2 py-4 w-[480px] h-[240px] bg-white rounded-3xl">
-        {/* <div className="md:flex gap-8"> */}
-          <h3 className="text-3xl py-4 font-bold text-cerulean-blue-900">Contacto</h3>
-          <p>Puedes enviarme un correo a:</p>
-          <p className="text-astronaut-700 font-bold text-xl">jhan24b@gmail.com</p>
+    <section id="contact">
+      <div className="max-w-4xl mx-auto my-4 flex justify-center py-8">
+        <div className="flex justify-center flex-col items-center gap-2 py-4 w-[480px] h-[240px] bg-white dark:bg-mercury-600 rounded-3xl">
+          {/* <div className="md:flex gap-8"> */}
+        <h3 className="text-3xl py-4 font-bold text-cerulean-blue-900 dark:text-astronaut-50">
+            Contacto
+          </h3>
+          <p className="text-mercury-900 dark:text-astronaut-50">Puedes enviarme un correo a:</p>
+          <p className="text-astronaut-700 dark:text-astronaut-100 font-bold text-xl">
+            jhan24b@gmail.com
+          </p>
           {/* <div className="flex flex-col justify-center max-w-96 mx-16">
             <h2 className="text-astronaut-700 text-[32px] font-medium">
               Necesitas un prospecto?
@@ -92,6 +96,6 @@ export default function Contact() {
           </div> */}
         </div>
       </div>
-    // </section>
+    </section>
   );
 }

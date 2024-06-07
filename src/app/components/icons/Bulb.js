@@ -1,7 +1,7 @@
 function Bulb({ className = "w-8 h-8" }) {
   return (
     <svg
-      class="w-[36px] h-[36px] text-red-500 dark:text-white"
+      class="w-[36px] h-[36px] text-astronaut-800 dark:text-mercury-100"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"

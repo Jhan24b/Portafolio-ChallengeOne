@@ -24,9 +24,9 @@ export default function Header() {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
   return (
-    <header className="py-8 bg-astronaut-500 dark:bg-astronaut-900 px-4">
+    <header className="py-8 bg-mercury-200 dark:bg-astronaut-950 px-4">
       <div className="md:hidden max-w-4xl mx-auto flex grow text-lg font-semibold text-white">
-        <h3 className="grow text-astronaut-100 dark:text-white">Anthony J. Torres</h3>
+        <h3 className="grow text-astronaut-800 dark:text-white">Anthony J. Torres</h3>
         <button onClick={toggleNav} aria-label="Toggle navigation">
           <MenuIcon />
         </button>
@@ -46,7 +46,7 @@ export default function Header() {
             height={48}
             className="text-white"
           ></Image>
-          <h3 className="grow text-white">Anthony J. Torres</h3>
+          <h3 className="grow text-astronaut-800 dark:text-mercury-100">Anthony J. Torres</h3>
         </div>
         <Nav handleChangeTheme={handleChangeTheme}/>
       </div>

@@ -86,7 +86,7 @@ input[type="text"] {
 }
 
 section {
-  @apply bg-mercury-100 dark:bg-mercury-800 rounded-md my-6;
+  @apply bg-mercury-50 dark:bg-mercury-700 rounded-md my-6;
 }
 
 label {
@@ -126,7 +126,7 @@ a {
 }
 
 a:hover {
-  @apply text-astronaut-400;
+  @apply text-astronaut-500;
 }
 
 h2 {
