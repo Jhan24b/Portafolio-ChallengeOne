@@ -9,7 +9,7 @@ function renderCards(cards){
 function EducationSection({ title, items }) {
   return (
     <div>
-      <h3 className="text-cerulean-blue-800 font-bold text-[30px]">{title}</h3>
+      <h3 className="text-astronaut-800 dark:text-astronaut-100 font-bold text-[30px]">{title}</h3>
       <div className="p-12">
         <div className="flex justify-center items-center flex-col md:flex-row gap-12 md:gap-8 flex-wrap">
           {renderCards(items)}
@@ -63,7 +63,7 @@ export default function Academic() {
   return (
     <section id="formacion">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="">Formación Académica</h2>
+        <h2 >Formación Académica</h2>
         <EducationSection title="Grados" items={grades} />
         <EducationSection title="Especializaciones" items={specialization} />
       </div>

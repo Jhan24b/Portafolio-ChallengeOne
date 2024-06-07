@@ -20,7 +20,7 @@ export default function Presentation() {
             />
           </div>
           <div className="mx-2">
-            <h1 className="font-semibold text-astronaut-900 dark:text-astronaut-100 my-6 text-[32px] ">
+            <h1 className="font-semibold text-astronaut-800 dark:text-astronaut-100 my-6 text-[32px] ">
               Hola, soy Anthony J. Torres, <br />
               Full Stack (MERN) - Software Engineer
             </h1>
