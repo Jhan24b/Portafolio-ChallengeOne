@@ -24,7 +24,7 @@ export default function Header() {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
   return (
-    <header className="py-8 bg-mercury-200 dark:bg-astronaut-950 px-4">
+    <header className="py-8 bg-mercury-300 dark:bg-astronaut-950 px-4">
       <div className="md:hidden max-w-4xl mx-auto flex grow text-lg font-semibold text-white">
         <h3 className="grow text-astronaut-800 dark:text-white">Anthony J. Torres</h3>
         <button onClick={toggleNav} aria-label="Toggle navigation">
