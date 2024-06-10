@@ -121,6 +121,16 @@ div.card {
   grid-template-columns: 0.65fr 0.35fr;
 }
 
+div.cardinvertedD {
+  @apply block md:grid grid-cols-2 py-8 md:py-16 mx-4 md:mx-8 md:px-4 bg-mercury-100 dark:bg-mercury-600 rounded-xl;
+  grid-template-columns: 0.45fr 0.55fr;
+}
+
+div.cardD {
+  @apply block md:grid grid-cols-2 py-8 md:py-16 md:mx-8 md:px-4 mx-4 bg-mercury-100 dark:bg-mercury-600 rounded-xl;
+  grid-template-columns: 0.55fr 0.45fr;
+}
+
 a {
   @apply flex justify-center items-center gap-1 font-medium;
 }
@@ -131,4 +141,31 @@ a:hover {
 
 h2 {
   @apply text-astronaut-900 font-bold text-[36px] py-8 dark:text-astronaut-50;
+}
+
+.contenedor {
+  position: relative;
+  display: inline-block;
+}
+/* Diseno pop up por mejorar */
+.text {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Ajusta según donde quieres que aparezca el texto */
+  left: 50%;
+  margin-left: -100px; /* Ajusta para centrar el texto */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.contenedor:hover .text {
+  visibility: visible;
+  opacity: 1;
 }
