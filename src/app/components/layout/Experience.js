@@ -114,7 +114,7 @@ export default function Experience() {
       Arquitectura: "MVC",
       description:
         "Un sistema de gestión escolar que abarca todos los aspectos clave de la administración de una institución educativa. Este sistema facilita la gestión de pagos, la administración de información del personal, y la supervisión de notas y asistencia de los estudiantes.",
-      status: "Vendido",
+      status: "Desplegado",
       caracteristicas: [
         "Gestión de Pagos",
         "Información del Personal",

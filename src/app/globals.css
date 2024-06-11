@@ -143,23 +143,20 @@ h2 {
   @apply text-astronaut-900 font-bold text-[36px] py-8 dark:text-astronaut-50;
 }
 
-.contenedor {
-  position: relative;
-  display: inline-block;
-}
+
 /* Diseno pop up por mejorar */
 .text {
   visibility: hidden;
-  width: 200px;
-  background-color: black;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.727);
   color: white;
   text-align: center;
   border-radius: 6px;
-  padding: 10px;
+  padding: 5px;
   position: absolute;
   z-index: 1;
   bottom: 100%; /* Ajusta según donde quieres que aparezca el texto */
-  left: 50%;
+  left: 100%;
   margin-left: -100px; /* Ajusta para centrar el texto */
   opacity: 0;
   transition: opacity 0.3s;

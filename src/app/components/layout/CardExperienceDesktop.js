@@ -18,15 +18,17 @@ export default function CardExperienceDesktop({ card }) {
   return (
     <div className={type}>
       {type === "cardD" && (
-        <div className=" gap-4 contenedor">
-          <Image
-            src={img}
-            alt={title}
-            width={420}
-            height={420}
-            className="rounded-lg hover:marker:"
-          />
-          <p className="text">{status}</p>
+        <div className="flex justify-center items-center">
+          <div className="gap-4 inline-block relative contenedor">
+            <Image
+              src={img}
+              alt={title}
+              width={420}
+              height={420}
+              className="rounded-lg"
+            />
+            <p className="text">{status}</p>
+          </div>
         </div>
       )}
       <div className="flex flex-col justify-center items-center my-4 mx-2 gap-y-2">
@@ -45,7 +47,7 @@ export default function CardExperienceDesktop({ card }) {
           <p className="w-[80%] mx-[10%] text-[14px] my-2">{description}</p>
           <div className="flex justify-center gap-3">
             <p className="font-bold text-[16px] dark:text-mercury-100">
-              Tecnología:
+              Tecnologías:
             </p>
             {tech.map((Tecnologia, idx) => {
               return <Tecnologia key={idx} />;
@@ -72,15 +74,17 @@ export default function CardExperienceDesktop({ card }) {
         </div>
       </div>
       {type === "cardinvertedD" && (
-        <div className="flex justify-center flex-col contenedor">
-          <Image
-            src={img}
-            alt={title}
-            width={480}
-            height={240}
-            className="rounded-lg"
-          />
-          <p className="text">{status}</p>
+        <div className="flex justify-center items-center">
+          <div className="gap-4 inline-block relative contenedor">
+            <Image
+              src={img}
+              alt={title}
+              width={420}
+              height={420}
+              className="rounded-lg"
+            />
+            <p className="text">{status}</p>
+          </div>
         </div>
       )}
     </div>
