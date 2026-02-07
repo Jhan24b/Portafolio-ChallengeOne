@@ -2,7 +2,8 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #232748; /* astronaut-950 */
+  --muted-foreground: #4b64c5; /* astronaut-600 */
 }
 
 @theme inline {
@@ -10,17 +11,154 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Astronaut Palette */
+  --color-astronaut-50: #f2f5fc;
+  --color-astronaut-100: #e2e9f7;
+  --color-astronaut-200: #cbd8f2;
+  --color-astronaut-300: #a7bfe9;
+  --color-astronaut-400: #7d9edd;
+  --color-astronaut-500: #5f7fd2;
+  --color-astronaut-600: #4b64c5;
+  --color-astronaut-700: #4153b4;
+  --color-astronaut-800: #3a4693;
+  --color-astronaut-900: #313b72;
+  --color-astronaut-950: #232748;
+
+  /* Cerulean Blue Palette (Matching the astronaut vibe) */
+  --color-cerulean-blue-50: #f0f9ff;
+  --color-cerulean-blue-100: #e0f2fe;
+  --color-cerulean-blue-200: #bae6fd;
+  --color-cerulean-blue-300: #7dd3fc;
+  --color-cerulean-blue-400: #38bdf8;
+  --color-cerulean-blue-500: #0ea5e9;
+  --color-cerulean-blue-600: #0284c7;
+  --color-cerulean-blue-700: #0369a1;
+  --color-cerulean-blue-800: #075985;
+  --color-cerulean-blue-900: #0c4a6e;
+  --color-cerulean-blue-950: #082f49;
+
+  /* Primary Mappings */
+  --color-primary: var(--color-astronaut-600);
+  --color-primary-foreground: white;
+  
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+
+  --color-accent: var(--color-cerulean-blue-500);
+  --color-accent-foreground: white;
 }
+
+@variant dark (&:where(.dark, .dark *));
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #090a0f;
+    --foreground: #f2f5fc; /* astronaut-50 */
+    --muted-foreground: #cbd8f2; /* astronaut-200 */
   }
+}
+
+.dark {
+  --background: #090a0f;
+  --foreground: #f2f5fc;
+  --muted-foreground: #cbd8f2;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind everything */
+  pointer-events: none;
+  background: radial-gradient(ellipse at bottom, #f0f4f8 0%, #ffffff 100%);
+  transition: background 0.5s ease;
+}
+
+.dark .star-container {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.star {
+  position: absolute;
+  background: #4b64c5; /* Blueish for light mode */
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: star-pulse 3s infinite alternate;
+  transition: background 0.5s ease, opacity 0.5s ease;
+}
+
+.dark .star {
+  background: white;
+  opacity: 0.5;
+}
+
+@keyframes star-pulse {
+  0% { transform: scale(1); opacity: 0.2; }
+  100% { transform: scale(1.5); opacity: 0.8; }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Data Engineer Special Style */
+.data-engineer-card {
+  border: 1px solid transparent;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) padding-box,
+              linear-gradient(135deg, var(--color-astronaut-500), var(--color-cerulean-blue-500)) border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .data-engineer-card {
+  background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)) padding-box,
+              linear-gradient(135deg, var(--color-astronaut-600), var(--color-cerulean-blue-400)) border-box;
+}
+
+.data-engineer-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(95, 127, 210, 0.1) 0%, transparent 70%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+.data-engineer-card:hover::before {
+  transform: translate(25%, 25%);
+}
+
+.data-engineer-tag {
+  background: linear-gradient(to right, var(--color-astronaut-600), var(--color-cerulean-blue-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 0.1em;
 }
