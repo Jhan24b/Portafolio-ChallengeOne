@@ -31,7 +31,7 @@ export default function Presentation() {
             />
           </div>
           <div className="flex-1 mt-12 md:mt-0 text-center md:text-left">
-            <h1 className="font-extrabold mb-6 text-xl md:text-2xl lg:text-5xl leading-[1.1] text-cerulean-blue-500 dark:text-cerulean-blue-400  tracking-tight ">
+            <h1 className="font-extrabold mb-6 text-xl md:text-2xl lg:text-5xl leading-[1.1] text-astronaut-300 dark:text-cerulean-blue-50  tracking-tight ">
               {greeting} <span className="text-primary">{data.name}</span>, <br />
               <span className="text-cerulean-blue-600 dark:text-cerulean-blue-400 opacity-90">{data.title}</span>
             </h1>

@@ -30,7 +30,7 @@ export default function Header() {
               height={40}
               className="rounded-lg shadow-sm"
             />
-            <h3 className="text-xl font-bold text-astronaut-950 dark:text-foreground-dark">Anthony J. Torres</h3>
+            <h3 className="text-xl font-bold text-astronaut-950 dark:text-foreground">Anthony J. Torres</h3>
           </div>
           <button className="md:hidden p-2 text-primary" onClick={toggleNav} aria-label="Toggle navigation">
             <MenuIcon />
