@@ -8,16 +8,24 @@ import CardExperienceDesktop from "./CardExperienceDesktop";
 import { useState } from "react";
 import { Project } from "@/types";
 
-function renderProjects(projects: Project[]) {
+import CardExperienceData from "./CardExperienceData";
+
+function renderProjects(projects: Project[], view: string) {
   return projects.map((proyecto, idx) => {
     const type = idx % 2 === 0 ? "card" : "cardinverted";
+    if (view === 'dataEngineer') {
+      return <CardExperienceData key={idx} card={{ type, ...proyecto }} />;
+    }
     return <CardExperience key={idx} card={{ type, ...proyecto }} />;
   });
 }
 
-function renderProjectsDesktop(projects: Project[]) {
+function renderProjectsDesktop(projects: Project[], view: string) {
   return projects.map((proyecto, idx) => {
     const type = idx % 2 === 0 ? "cardD" : "cardinvertedD";
+    if (view === 'dataEngineer') {
+      return <CardExperienceData key={idx} card={{ type, ...proyecto }} />;
+    }
     return <CardExperienceDesktop key={idx} card={{ type, ...proyecto }} />;
   });
 }
@@ -45,7 +53,7 @@ export default function Experience() {
             <h3 className="text-2xl font-semibold text-muted-foreground italic">
               {t("experience.desktop")}
             </h3>
-            {renderProjectsDesktop(data.desktopProjects)}
+            {renderProjectsDesktop(data.desktopProjects, view)}
           </div>
         )}
 
@@ -78,7 +86,7 @@ export default function Experience() {
           )}
 
           <div className="flex flex-col gap-16">
-            {renderProjects(filteredProjects)}
+            {renderProjects(filteredProjects, view)}
           </div>
         </div>
       </div>

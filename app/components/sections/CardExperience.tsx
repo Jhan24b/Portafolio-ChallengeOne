@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Github from "../icons/Github";
 import Link from "next/link";
-import Plane from "../icons/Plane";
 import { Project } from "@/types";
 import { useView } from "@/lib/ViewContext";
+import { Layers, Terminal, ExternalLink } from "lucide-react";
 
 interface CardExperienceProps {
   card: Project & { type: string };
@@ -13,7 +13,6 @@ export default function CardExperience({ card }: CardExperienceProps) {
   const {
     title,
     subtitle,
-    role,
     tech,
     img,
     urlRepository,
@@ -24,72 +23,94 @@ export default function CardExperience({ card }: CardExperienceProps) {
 
   const { view } = useView();
   const isReversed = type === "cardinverted";
-  const isDataEngineer = view === "dataEngineer";
 
   return (
-    <div className={`group relative flex flex-col md:flex-row items-center gap-8 md:gap-12 p-6 md:p-10 rounded-3xl transition-all duration-500 hover:shadow-2xl ${isDataEngineer ? 'data-engineer-card' : 'glass hover:shadow-primary/20'} ${isReversed ? 'md:flex-row-reverse' : ''}`}>
-      {isDataEngineer && (
-        <div className="absolute -top-3 -right-3 bg-gradient-to-r from-astronaut-600 to-cerulean-blue-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full shadow-lg z-20 tracking-tighter uppercase border border-white/20">
-          Data Architecture
+    <div className={`group relative flex flex-col md:flex-row items-stretch gap-8 md:gap-16 p-1 rounded-[2.5rem] transition-all duration-500 mb-20 ${isReversed ? 'md:flex-row-reverse' : ''}`}>
+      
+      {/* Structural Decoration */}
+      <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-astronaut-500/10 dark:via-white/5 to-transparent -z-10"></div>
+
+      {/* Image Showcase */}
+      <div className="flex-1 relative w-full perspective-1000">
+        <div className="relative overflow-hidden rounded-[2rem] border border-astronaut-900/10 dark:border-white/10 shadow-2xl aspect-video group-hover:shadow-cerulean-blue-500/20 transition-all duration-500">
+          <Image
+            src={img}
+            alt={title}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-1000"
+          />
+          {/* Technical Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-astronaut-950/80 via-transparent to-transparent opacity-60"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_40%,rgba(15,23,42,0.4)_100%)]"></div>
+          
+          <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+             <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-2">
+                  <Terminal className="w-3 h-3 text-cerulean-blue-400" />
+                  <span className="text-[10px] font-black text-cerulean-blue-400 uppercase tracking-[0.2em]">Deployment Status</span>
+                </div>
+                <span className="text-sm font-black text-white uppercase italic">Active Node</span>
+             </div>
+             <Layers className="w-10 h-10 text-white/20" />
+          </div>
         </div>
-      )}
-      <div className="flex-1 w-full overflow-hidden rounded-2xl shadow-lg group-hover:scale-[1.02] transition-transform duration-500">
-        <Image
-          src={img}
-          alt={title}
-          width={720}
-          height={480}
-          className="w-full h-auto object-cover"
-        />
       </div>
 
-      <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-        <div className="mb-4">
-          <h4 className="text-3xl font-extrabold text-foreground mb-1 tracking-tight">
+      {/* Info Section */}
+      <div className="flex-1 flex flex-col justify-center">
+        <div className="mb-6">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="h-px w-8 bg-cerulean-blue-500"></div>
+            <h5 className="text-xs font-black uppercase tracking-[0.4em] text-cerulean-blue-600 dark:text-cerulean-blue-400">
+              {subtitle}
+            </h5>
+          </div>
+          <h4 className="text-4xl md:text-5xl font-black text-astronaut-950 dark:text-white tracking-tighter uppercase leading-[0.9] mb-4">
             {title}
           </h4>
-          <h5 className={`text-sm font-bold uppercase tracking-[0.2em] ${isDataEngineer ? 'data-engineer-tag' : 'text-cerulean-blue-600 dark:text-cerulean-blue-400'}`}>
-            {subtitle}
-          </h5>
         </div>
 
         {description && (
-          <p className="text-muted-foreground mb-6 line-clamp-3 group-hover:line-clamp-none transition-all duration-500">
-            {description}
-          </p>
+          <div className="relative mb-8">
+            <p className="text-astronaut-800 dark:text-muted-foreground text-lg leading-relaxed font-medium line-clamp-3 group-hover:line-clamp-none transition-all duration-500 border-l-4 border-astronaut-500/20 pl-6 italic">
+              {description}
+            </p>
+          </div>
         )}
 
-        <div className="mb-8 w-full">
-          <span className="text-xs font-semibold text-muted-foreground uppercase mb-3 block">Technologies</span>
-          <div className="flex flex-wrap justify-center md:justify-start gap-4">
+        {/* Tech Ecosystem */}
+        <div className="mb-10">
+          <span className="text-[10px] font-black text-astronaut-400 dark:text-muted-foreground uppercase tracking-[0.3em] mb-4 block">Tech Ecosystem</span>
+          <div className="flex flex-wrap gap-3">
             {tech.map((Tecnologia, idx) => (
-              <div key={idx} className="p-2 glass rounded-xl hover:bg-primary/10 transition-colors tooltip group/tech">
-                {typeof Tecnologia !== 'string' ? <Tecnologia className="w-6 h-6" /> : Tecnologia}
+              <div key={idx} className="px-4 py-2 glass rounded-xl border border-astronaut-500/10 dark:border-white/10 hover:bg-astronaut-500/10 dark:hover:bg-white/10 transition-all hover:-translate-y-1 group/tech flex items-center gap-2">
+                {typeof Tecnologia !== 'string' ? <Tecnologia className="w-5 h-5 text-astronaut-900 dark:text-white" /> : <span className="text-xs font-black text-astronaut-900 dark:text-white">{Tecnologia}</span>}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center md:justify-start gap-6 w-full">
+        {/* Action Reveal */}
+        <div className="flex flex-wrap items-center gap-8">
+          {urlProduction && (
+            <Link 
+              href={urlProduction} 
+              target="_blank" 
+              className="group/btn flex items-center gap-3 bg-astronaut-950 dark:bg-white text-white dark:text-astronaut-950 px-8 py-3.5 rounded-full font-black uppercase text-xs tracking-widest hover:scale-105 transition-all shadow-xl shadow-astronaut-900/20 dark:shadow-white/5"
+            >
+              <span>Launch Demo</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+          )}
+
           {urlRepository && (
             <Link 
               href={urlRepository} 
               target="_blank" 
-              className="flex items-center gap-2 font-semibold text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-3 font-black text-astronaut-600 dark:text-astronaut-400 hover:text-cerulean-blue-600 dark:hover:text-cerulean-blue-400 transition-colors uppercase text-xs tracking-widest group/repo"
             >
-              <Github className="w-6 h-6" />
-              <span>Repo</span>
-            </Link>
-          )}
-
-          {urlProduction && (
-            <Link 
-            href={urlProduction} 
-            target="_blank" 
-            className="flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/80 transition-all hover:translate-x-1"
-            >
-            <span>Demo</span>
-            <Plane className="w-5 h-5"/>
+              <Github className="w-5 h-5 group-hover/repo:rotate-12 transition-transform" />
+              <span className="border-b-2 border-transparent group-hover:border-current">Source Code</span>
             </Link>
           )}
         </div>

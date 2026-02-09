@@ -18,7 +18,7 @@ export default function Presentation() {
 
   return (
     <section id="about" className="overflow-hidden">
-      <div className="max-w-4xl md:mx-auto min-h-[70vh] flex items-center px-4 ">
+      <div className="max-w-4xl md:mx-auto min-h-[70vh] flex items-center px-4 md:mt-8">
         <div className="about flex flex-col md:flex-row gap-12 md:gap-20 items-center w-full">
           <div className="flex justify-center relative">
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
@@ -30,8 +30,8 @@ export default function Presentation() {
               height="250"
             />
           </div>
-          <div className="flex-1 mt-9 md:mt-0 text-center md:text-left">
-            <h1 className="font-extrabold mb-6 text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-foreground tracking-tight">
+          <div className="flex-1 mt-12 md:mt-0 text-center md:text-left">
+            <h1 className="font-extrabold mb-6 text-xl md:text-2xl lg:text-5xl leading-[1.1] text-cerulean-blue-500 dark:text-cerulean-blue-400  tracking-tight ">
               {greeting} <span className="text-primary">{data.name}</span>, <br />
               <span className="text-cerulean-blue-600 dark:text-cerulean-blue-400 opacity-90">{data.title}</span>
             </h1>

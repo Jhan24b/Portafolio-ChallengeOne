@@ -13,6 +13,9 @@ export const metadata = {
   title: "Anthony Torres",
   description: "My portfolio",
   keywords: ["Anthony Torres", "portfolio", "Software Developer", "web developer", "react developer", "projects", "skills"],
+  icons:{
+    icon: "/lighLogo.png"
+  }
 };
 
 export default function RootLayout({
