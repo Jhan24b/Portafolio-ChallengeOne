@@ -10,16 +10,18 @@ interface EducationSectionProps {
   items: Grade[];
 }
 
-function renderCards(cards: Grade[]){
+function renderCards(cards: Grade[]) {
   return cards.map((card, idx) => {
     return <CardGrade key={idx} data={card} />;
-  })
+  });
 }
 
 function EducationSection({ title, items }: EducationSectionProps) {
   return (
     <div className="mb-12">
-      <h3 className="text-2xl font-semibold text-muted-foreground italic mb-8">{title}</h3>
+      <h3 className="text-2xl font-semibold text-muted-foreground italic mb-8">
+        {title}
+      </h3>
       <div className="flex justify-center items-center flex-col md:flex-row gap-10 md:gap-12 flex-wrap">
         {renderCards(items)}
       </div>
@@ -35,86 +37,113 @@ export default function Academic() {
   const grades: Grade[] = isAIML
     ? [
         {
-          title: language === "en" ? "Bachelor's Degree in Systems Engineering and Informatics" : "Licenciatura en Ingeniería de Sistemas e Informática",
+          title:
+            language === "en"
+              ? "Bachelor's Degree in Systems Engineering and Informatics"
+              : "Licenciatura en Ingeniería de Sistemas e Informática",
           subtitle: "UTP",
           duration: language === "en" ? "In Progress" : "En Curso",
-          img: "/utpLogo.png",
+          img: "/utpLogo.png"
         }
       ]
     : [
         {
-          title: language === "en" ? "Bachelor's Degree in Systems Engineering and Informatics" : "Licenciatura en Ingeniería de Sistemas e Informática",
+          title:
+            language === "en"
+              ? "Bachelor's Degree in Systems Engineering and Informatics"
+              : "Licenciatura en Ingeniería de Sistemas e Informática",
           subtitle: "UTP",
           duration: language === "en" ? "In Progress" : "En Curso",
-          img: "/utpLogo.png",
+          img: "/utpLogo.png"
         },
         {
-          title: language === "en" ? "Front-End Specialization" : "Especializacion Front-End",
+          title:
+            language === "en"
+              ? "Front-End Specialization"
+              : "Especializacion Front-End",
           subtitle: "Oracle - Alura Latam",
           duration: "2023",
-          img: "/aluraLogo.png",
-        },
+          img: "/aluraLogo.png"
+        }
       ];
 
   const specialization: Grade[] = isAIML
     ? [
         {
-          title: language === "en" ? "Machine Learning Specialization" : "Especialización en Machine Learning",
+          title:
+            language === "en"
+              ? "Machine Learning Specialization"
+              : "Especialización en Machine Learning",
           subtitle: "Stanford / DeepLearning.AI",
           duration: "2024",
-          img: "/metaLogo.png",
+          img: "/metaLogo.png"
         },
         {
-          title: language === "en" ? "Deep Learning Specialization" : "Especialización en Deep Learning",
+          title:
+            language === "en"
+              ? "Deep Learning Specialization"
+              : "Especialización en Deep Learning",
           subtitle: "DeepLearning.AI",
           duration: "2024",
-          img: "/aluraLogo.png",
+          img: "/aluraLogo.png"
         },
         {
           title: "TensorFlow Developer Certificate",
           subtitle: "Google",
           duration: "2023",
-          img: "/googleLogo.png",
+          img: "/googleLogo.png"
         },
         {
-          title: language === "en" ? "AI Engineering Professional" : "Profesional en Ingeniería de IA",
+          title:
+            language === "en"
+              ? "AI Engineering Professional"
+              : "Profesional en Ingeniería de IA",
           subtitle: "IBM",
           duration: "2023",
-          img: "/Umich.png",
-        },
+          img: "/Umich.png"
+        }
       ]
     : [
         {
           title: "Front-End - React",
           subtitle: "Meta",
           duration: "2024",
-          img: "/metaLogo.png",
+          img: "/metaLogo.png"
         },
         {
-          title: language === "en" ? "Front-End Specialization" : "Especializacion Front-End",
+          title:
+            language === "en"
+              ? "Front-End Specialization"
+              : "Especializacion Front-End",
           subtitle: "Oracle - Alura Latam",
           duration: "2023",
-          img: "/aluraLogo.png",
+          img: "/aluraLogo.png"
         },
         {
           title: "Google IT Support",
           subtitle: "Google",
           duration: "2023",
-          img: "/googleLogo.png",
-        },{
+          img: "/googleLogo.png"
+        },
+        {
           title: "Python for Everybody",
           subtitle: "University of Michigan",
           duration: "2022",
-          img: "/Umich.png",
-        },
+          img: "/Umich.png"
+        }
       ];
 
   return (
     <section id="formacion" className="py-24">
       <div className="max-w-6xl mx-auto text-center px-4">
-        <h2 className="text-5xl md:text-7xl font-black text-foreground mb-20 tracking-tighter uppercase leading-none">{t("academic.title")}</h2>
+        <h2 className="text-5xl md:text-7xl font-black text-astronaut-800 dark:text-astronaut-100 mb-20 tracking-tighter uppercase leading-none">
+          {t("academic.title")}
+        </h2>
         <EducationSection title={t("academic.degrees")} items={grades} />
-        <EducationSection title={t("academic.specializations")} items={specialization} />
+        <EducationSection
+          title={t("academic.specializations")}
+          items={specialization}
+        />
       </div>
     </section>
   );

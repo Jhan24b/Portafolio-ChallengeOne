@@ -35,7 +35,7 @@ export default function RootLayout({
                 <Header />
                 <div className="flex flex-1 relative">
                   <Sidebar />
-                  <main className="flex-1 min-h-[calc(100vh-76px)] pl-20 md:pl-72 transition-all duration-500 relative z-10">
+                  <main className="flex-1 min-h-[calc(100vh-76px)] transition-all duration-500 relative z-10">
                     {children}
                     <Footer />
                   </main>

@@ -201,6 +201,73 @@ body {
   letter-spacing: 0.1em;
 }
 
+/* Black Hole Event Horizon */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-slower {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes event-horizon-glow {
+  0%, 100% { box-shadow: 0 0 30px 10px rgba(14, 165, 233, 0.08), 0 0 60px 20px rgba(14, 165, 233, 0.03); }
+  50% { box-shadow: 0 0 50px 20px rgba(14, 165, 233, 0.2), 0 0 100px 40px rgba(14, 165, 233, 0.08); }
+}
+
+@keyframes event-horizon-ring {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+  50% { transform: rotate(180deg) scale(1.05); opacity: 0.8; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.5; }
+}
+
+@keyframes light-bend {
+  0%, 100% { transform: rotate(0deg) scale(1); border-color: rgba(14, 165, 233, 0.1); }
+  25% { border-color: rgba(14, 165, 233, 0.3); }
+  50% { transform: rotate(180deg) scale(1.1); border-color: rgba(14, 165, 233, 0.4); }
+  75% { border-color: rgba(14, 165, 233, 0.2); }
+}
+
+@keyframes accretion-particle {
+  0% { transform: rotate(0deg) translateX(140px) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: rotate(360deg) translateX(140px) rotate(-360deg); opacity: 0; }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-spin-slower {
+  animation: spin-slower 12s linear infinite;
+}
+
+.animate-event-horizon {
+  animation: event-horizon-glow 4s ease-in-out infinite;
+}
+
+.animate-event-horizon-ring {
+  animation: event-horizon-ring 6s ease-in-out infinite;
+}
+
+.animate-light-bend {
+  animation: light-bend 5s ease-in-out infinite;
+}
+
+.animate-accretion-particle {
+  animation: accretion-particle 3s linear infinite;
+}
+
+.accretion-particle:nth-child(1) { animation-delay: 0s; }
+.accretion-particle:nth-child(2) { animation-delay: 0.5s; }
+.accretion-particle:nth-child(3) { animation-delay: 1s; }
+.accretion-particle:nth-child(4) { animation-delay: 1.5s; }
+.accretion-particle:nth-child(5) { animation-delay: 2s; }
+.accretion-particle:nth-child(6) { animation-delay: 2.5s; }
+
 /* Premium Animations */
 @keyframes shimmer {
   0% { transform: translateX(-100%) skewX(-25deg); }
