@@ -1,55 +1,65 @@
 "use client";
-import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
-import MenuIcon from "../icons/MenuIcon";
-import Nav from "./Nav";
-import ViewSwitch from "../ViewSwitch";
 
+import Image from "next/image";
 import { useTheme } from "@/lib/ThemeContext";
+import { useLanguage } from "@/lib/LanguageContext";
+import ViewSwitch from "../ViewSwitch";
+import { Sun, Moon } from "lucide-react";
 
 export default function Header() {
-  const [navOpen, setNavOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage } = useLanguage();
 
-  const toggleNav = useCallback(() => {
-    setNavOpen((prevNavOpen) => !prevNavOpen);
-  }, []);
-
-  const handleChangeTheme = () => {
-    toggleTheme();
-  };
   return (
-    <header className="sticky top-0 z-50 w-full glass shadow-lg transition-all duration-500 py-4 px-4 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center justify-between w-full md:w-auto">
-          <div className="flex items-center gap-3">
-            <Image
-              alt="Logo-Anthony"
-              src={theme === "dark" ? "/lighLogo.png" : "/darkerLogo.png"}
-              width={40}
-              height={40}
-              className="rounded-lg shadow-sm"
-            />
-            <h3 className="text-xl font-bold text-astronaut-950 dark:text-foreground">Anthony J. Torres</h3>
-          </div>
-          <button className="md:hidden p-2 text-primary" onClick={toggleNav} aria-label="Toggle navigation">
-            <MenuIcon />
+    <header className="sticky top-0 z-50 w-full glass shadow-md transition-all duration-500 py-3 px-4 font-sans h-[72px] md:h-[76px] flex items-center">
+      <div className="w-full flex items-center justify-between gap-2 max-w-7xl mx-auto">
+        {/* Left: Logo and Name */}
+        <div className="flex items-center gap-3">
+          <Image
+            alt="Logo-Anthony"
+            src={theme === "dark" ? "/lighLogo.png" : "/darkerLogo.png"}
+            width={36}
+            height={36}
+            className="rounded-lg shadow-sm"
+          />
+          <span className="text-base sm:text-lg font-bold text-astronaut-950 dark:text-foreground hidden md:block whitespace-nowrap">
+            Anthony J. Torres
+          </span>
+          <span className="text-sm font-bold text-astronaut-950 dark:text-foreground hidden sm:block md:hidden whitespace-nowrap">
+            Anthony T.
+          </span>
+        </div>
+
+        {/* Center: ViewSwitch */}
+        <div className="flex-1 flex justify-center">
+          <ViewSwitch />
+        </div>
+
+        {/* Right: Controls (Language and Theme) */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Language Switch */}
+          <button 
+            onClick={toggleLanguage}
+            className="w-9 h-9 flex items-center justify-center glass rounded-full hover:bg-primary/10 transition-all text-xs font-black text-primary border border-primary/20 hover:scale-105 active:scale-95 cursor-pointer"
+            aria-label="Toggle language"
+          >
+            {language === "en" ? "EN" : "ES"}
+          </button>
+
+          {/* Theme Switch */}
+          <button 
+            onClick={toggleTheme}
+            className="w-9 h-9 flex items-center justify-center glass rounded-full hover:bg-primary/10 transition-all text-primary hover:scale-105 active:scale-95 cursor-pointer"
+            aria-label="Toggle theme"
+          >
+            {theme === "light" ? (
+              <Moon className="w-4 h-4 text-astronaut-700 dark:text-astronaut-300" />
+            ) : (
+              <Sun className="w-4 h-4 text-amber-400" />
+            )}
           </button>
         </div>
-
-        <div className="flex flex-col md:flex-row items-center gap-6">
-          <ViewSwitch />
-          <div className="hidden md:block">
-            <Nav handleChangeTheme={handleChangeTheme}/>
-          </div>
-        </div>
       </div>
-      
-      {navOpen && (
-        <div className="md:hidden mt-4 p-4 glass rounded-xl flex flex-col gap-4 animate-in fade-in slide-in-from-top-4">
-          <Nav handleChangeTheme={handleChangeTheme}/>
-        </div>
-      )}
     </header>
   );
 }

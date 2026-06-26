@@ -9,7 +9,11 @@ export function ViewProvider({ children }: { children: ReactNode }) {
   const [view, setView] = useState<ViewType>("softwareEngineer");
 
   const toggleView = () => {
-    setView((prev) => (prev === "softwareEngineer" ? "dataEngineer" : "softwareEngineer"));
+    setView((prev) =>
+      prev === "softwareEngineer" ? "dataEngineer" :
+      prev === "dataEngineer" ? "aiMLEngineer" :
+      "softwareEngineer"
+    );
   };
 
   return (

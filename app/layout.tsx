@@ -1,5 +1,6 @@
 import { Roboto } from "next/font/google";
 import Header from "./components/sections/Header";
+import Sidebar from "./components/sections/Sidebar";
 import "./globals.css";
 import Footer from "./components/sections/Footer";
 import { ViewProvider } from "@/lib/ViewContext";
@@ -30,11 +31,16 @@ export default function RootLayout({
           <LanguageProvider>
             <ViewProvider>
               <Stars />
-              <main className="relative z-10 transition-all duration-500">
+              <div className="relative min-h-screen flex flex-col z-10">
                 <Header />
-                {children}
-                <Footer />
-              </main>
+                <div className="flex flex-1 relative">
+                  <Sidebar />
+                  <main className="flex-1 min-h-[calc(100vh-76px)] pl-20 md:pl-72 transition-all duration-500 relative z-10">
+                    {children}
+                    <Footer />
+                  </main>
+                </div>
+              </div>
             </ViewProvider>
           </LanguageProvider>
         </ThemeProvider>

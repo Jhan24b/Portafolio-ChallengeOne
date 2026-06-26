@@ -90,8 +90,8 @@ export default function CardExperienceData({ card }: CardExperienceDataProps) {
 
               {/* Technologies with Node Visual */}
               <div className="mb-8">
-                <span className="text-[10px] font-black text-astronaut-500 dark:text-muted-foreground uppercase tracking-[0.3em] mb-4 block">Core Components</span>
-                <div className="flex flex-wrap gap-4">
+                <span className="text-[12px] font-black text-astronaut-500 dark:text-muted-foreground uppercase tracking-[0.3em] mb-4 block">Core Components</span>
+                <div className="flex flex-wrap gap-4 justify-center">
                   {tech.map((Tecnologia, idx) => (
                     <div key={idx} className="relative group/tech">
                       <div className="absolute -inset-1 bg-gradient-to-r from-astronaut-600 to-cerulean-blue-600 rounded-xl blur opacity-0 group-hover/tech:opacity-20 transition duration-500"></div>
@@ -106,7 +106,7 @@ export default function CardExperienceData({ card }: CardExperienceDataProps) {
 
             {/* Pipeline Features */}
             <div className="pt-6 border-t border-astronaut-500/10 dark:border-white/5">
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6">
+               <div className="flex justify-center gap-y-3 gap-x-12 mx-12">
                 {caracteristicas?.map((caracteristica, idx) => (
                   <div key={idx} className="flex items-center gap-3 group/feat">
                     <div className="w-2 h-2 rounded-full bg-astronaut-500 dark:bg-cerulean-blue-500 shadow-[0_0_8px_rgba(15,23,42,0.4)] dark:shadow-[0_0_8px_rgba(6,182,212,0.8)] group-hover/feat:scale-125 transition-transform"></div>

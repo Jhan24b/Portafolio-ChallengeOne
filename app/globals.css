@@ -163,6 +163,44 @@ body {
   letter-spacing: 0.1em;
 }
 
+/* AI/ML Engineer Special Style */
+.ai-engineer-card {
+  border: 1px solid transparent;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) padding-box,
+              linear-gradient(135deg, var(--color-cerulean-blue-500), var(--color-astronaut-500)) border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .ai-engineer-card {
+  background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)) padding-box,
+              linear-gradient(135deg, var(--color-cerulean-blue-400), var(--color-astronaut-600)) border-box;
+}
+
+.ai-engineer-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+.ai-engineer-card:hover::before {
+  transform: translate(25%, 25%);
+}
+
+.ai-engineer-tag {
+  background: linear-gradient(to right, var(--color-cerulean-blue-600), var(--color-astronaut-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
 /* Premium Animations */
 @keyframes shimmer {
   0% { transform: translateX(-100%) skewX(-25deg); }

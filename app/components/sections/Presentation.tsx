@@ -38,10 +38,10 @@ export default function Presentation() {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-medium max-w-2xl mx-auto md:mx-0">
               {data.bio}
             </p>
-            <div className="flex gap-4 mt-8 justify-center md:justify-start items-center flex-wrap">
+            <div className="flex gap-4 mt-8 justify-center md:justify-center items-center flex-wrap">
               <Link href="https://github.com/Jhan24b" target="_blank" className="flex items-center gap-2 px-5 py-2.5 glass rounded-full hover:bg-primary/10 transition-all hover:-translate-y-1 text-foreground font-bold text-sm">
-                <Github className="w-5 h-5" />
-                <span>Github</span>
+                <Github className="w-5 h-5 text-astronaut-800 dark:text-astronaut-200" />
+                <span className="text-astronaut-800 dark:text-astronaut-200">Github</span>
               </Link>
               
               <Link
@@ -49,8 +49,8 @@ export default function Presentation() {
                 target="_blank"
                 className="flex items-center gap-2 px-5 py-2.5 glass rounded-full hover:bg-primary/10 transition-all hover:-translate-y-1 text-foreground font-bold text-sm"
               >
-                <Linkedin className="w-5 h-5 text-primary" />
-                <span>Linkedin</span>
+                <Linkedin className="w-5 h-5 text-astronaut-800 dark:text-astronaut-200" />
+                <span className="text-astronaut-800 dark:text-astronaut-200">Linkedin</span>
               </Link>
 
               <Link
@@ -58,8 +58,8 @@ export default function Presentation() {
                 target="_blank"
                 className="flex items-center gap-2 px-5 py-2.5 glass rounded-full hover:bg-primary/10 transition-all hover:-translate-y-1 text-foreground font-bold text-sm"
               >
-                <Download className="w-5 h-5 text-cerulean-blue-600 dark:text-cerulean-blue-400" />
-                <span>CV</span>
+                <Download className="w-5 h-5 text-astronaut-800 dark:text-astronaut-200" />
+                <span className="text-astronaut-800 dark:text-astronaut-200">CV</span>
               </Link>
             </div>
           </div>

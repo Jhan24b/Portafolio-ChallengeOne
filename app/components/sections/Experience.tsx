@@ -5,6 +5,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { CONFIG } from "@/lib/config";
 import CardExperience from "./CardExperience";
 import CardExperienceDesktop from "./CardExperienceDesktop";
+import CardExperienceAI from "./CardExperienceAI";
 import { useState } from "react";
 import { Project } from "@/types";
 
@@ -16,6 +17,9 @@ function renderProjects(projects: Project[], view: string) {
     if (view === 'dataEngineer') {
       return <CardExperienceData key={idx} card={{ type, ...proyecto }} />;
     }
+    if (view === 'aiMLEngineer') {
+      return <CardExperienceAI key={idx} card={{ type, ...proyecto }} />;
+    }
     return <CardExperience key={idx} card={{ type, ...proyecto }} />;
   });
 }
@@ -25,6 +29,9 @@ function renderProjectsDesktop(projects: Project[], view: string) {
     const type = idx % 2 === 0 ? "cardD" : "cardinvertedD";
     if (view === 'dataEngineer') {
       return <CardExperienceData key={idx} card={{ type, ...proyecto }} />;
+    }
+    if (view === 'aiMLEngineer') {
+      return <CardExperienceAI key={idx} card={{ type, ...proyecto }} />;
     }
     return <CardExperienceDesktop key={idx} card={{ type, ...proyecto }} />;
   });
@@ -44,13 +51,13 @@ export default function Experience() {
   return (
     <section id="experience" className="relative">
       <div className="max-w-6xl mx-auto text-center my-16 md:my-24 flex flex-col gap-10 pb-4">
-        <h2 className="text-foreground font-black text-5xl md:text-7xl mb-4 tracking-tighter uppercase leading-none">
+        <h2 className="text-astronaut-800 dark:text-astronaut-100 font-black text-5xl md:text-7xl mb-4 tracking-tighter uppercase leading-none">
           {t("experience.title")}
         </h2>
         
         {data.desktopProjects.length > 0 && (
           <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
-            <h3 className="text-2xl font-semibold text-muted-foreground italic">
+            <h3 className="text-2xl font-semibold text-astronaut-800 dark:text-astronaut-100 italic">
               {t("experience.desktop")}
             </h3>
             {renderProjectsDesktop(data.desktopProjects, view)}

@@ -9,11 +9,11 @@ export default function Home() {
     <>
       <Presentation />
 
+      <AboutMe/>
+
       <Experience />
 
       <Academic />
-
-      {/* <AboutMe/> */}
 
       <Contact />
     </>

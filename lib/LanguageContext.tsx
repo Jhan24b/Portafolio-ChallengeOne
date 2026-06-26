@@ -29,6 +29,9 @@ const translations: Record<LanguageType, Record<string, string>> = {
     "footer.built_with": "Built with Passion",
     "view_switch.software": "Software Engineer",
     "view_switch.data": "Data Engineer",
+    "view_switch.ai": "AI/ML Engineer",
+    "aboutme.title": "About Me",
+    "skills.title": "Technical Arsenal",
   },
   es: {
     "nav.about": "Sobre mi",
@@ -53,6 +56,9 @@ const translations: Record<LanguageType, Record<string, string>> = {
     "footer.built_with": "Construido con Pasión",
     "view_switch.software": "Ingeniero de Software",
     "view_switch.data": "Ingeniero de Datos",
+    "view_switch.ai": "Ingeniero en IA/ML",
+    "aboutme.title": "Sobre Mí",
+    "skills.title": "Arsenal Técnico",
   }
 };
 

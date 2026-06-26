@@ -3,6 +3,7 @@
 import CardGrade from "./CardGrade";
 import { Grade } from "@/types";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useView } from "@/lib/ViewContext";
 
 interface EducationSectionProps {
   title: string;
@@ -28,47 +29,85 @@ function EducationSection({ title, items }: EducationSectionProps) {
 
 export default function Academic() {
   const { language, t } = useLanguage();
+  const { view } = useView();
+  const isAIML = view === "aiMLEngineer";
 
-  const grades: Grade[] = [
-    {
-      title: language === "en" ? "Bachelor's Degree in Systems Engineering and Informatics" : "Licenciatura en Ingeniería de Sistemas e Informática",
-      subtitle: "UTP",
-      duration: language === "en" ? "In Progress" : "En Curso",
-      img: "/utpLogo.png",
-    },
-    {
-      title: language === "en" ? "Front-End Specialization" : "Especializacion Front-End",
-      subtitle: "Oracle - Alura Latam",
-      duration: "2023",
-      img: "/aluraLogo.png",
-    },
-  ];
+  const grades: Grade[] = isAIML
+    ? [
+        {
+          title: language === "en" ? "Bachelor's Degree in Systems Engineering and Informatics" : "Licenciatura en Ingeniería de Sistemas e Informática",
+          subtitle: "UTP",
+          duration: language === "en" ? "In Progress" : "En Curso",
+          img: "/utpLogo.png",
+        }
+      ]
+    : [
+        {
+          title: language === "en" ? "Bachelor's Degree in Systems Engineering and Informatics" : "Licenciatura en Ingeniería de Sistemas e Informática",
+          subtitle: "UTP",
+          duration: language === "en" ? "In Progress" : "En Curso",
+          img: "/utpLogo.png",
+        },
+        {
+          title: language === "en" ? "Front-End Specialization" : "Especializacion Front-End",
+          subtitle: "Oracle - Alura Latam",
+          duration: "2023",
+          img: "/aluraLogo.png",
+        },
+      ];
 
-  const specialization: Grade[] = [
-    {
-      title: "Front-End - React",
-      subtitle: "Meta",
-      duration: "2024",
-      img: "/metaLogo.png",
-    },
-    {
-      title: language === "en" ? "Front-End Specialization" : "Especializacion Front-End",
-      subtitle: "Oracle - Alura Latam",
-      duration: "2023",
-      img: "/aluraLogo.png",
-    },
-    {
-      title: "Google IT Support",
-      subtitle: "Google",
-      duration: "2023",
-      img: "/googleLogo.png",
-    },{
-      title: "Python for Everybody",
-      subtitle: "University of Michigan",
-      duration: "2022",
-      img: "/Umich.png",
-    },
-  ];
+  const specialization: Grade[] = isAIML
+    ? [
+        {
+          title: language === "en" ? "Machine Learning Specialization" : "Especialización en Machine Learning",
+          subtitle: "Stanford / DeepLearning.AI",
+          duration: "2024",
+          img: "/metaLogo.png",
+        },
+        {
+          title: language === "en" ? "Deep Learning Specialization" : "Especialización en Deep Learning",
+          subtitle: "DeepLearning.AI",
+          duration: "2024",
+          img: "/aluraLogo.png",
+        },
+        {
+          title: "TensorFlow Developer Certificate",
+          subtitle: "Google",
+          duration: "2023",
+          img: "/googleLogo.png",
+        },
+        {
+          title: language === "en" ? "AI Engineering Professional" : "Profesional en Ingeniería de IA",
+          subtitle: "IBM",
+          duration: "2023",
+          img: "/Umich.png",
+        },
+      ]
+    : [
+        {
+          title: "Front-End - React",
+          subtitle: "Meta",
+          duration: "2024",
+          img: "/metaLogo.png",
+        },
+        {
+          title: language === "en" ? "Front-End Specialization" : "Especializacion Front-End",
+          subtitle: "Oracle - Alura Latam",
+          duration: "2023",
+          img: "/aluraLogo.png",
+        },
+        {
+          title: "Google IT Support",
+          subtitle: "Google",
+          duration: "2023",
+          img: "/googleLogo.png",
+        },{
+          title: "Python for Everybody",
+          subtitle: "University of Michigan",
+          duration: "2022",
+          img: "/Umich.png",
+        },
+      ];
 
   return (
     <section id="formacion" className="py-24">

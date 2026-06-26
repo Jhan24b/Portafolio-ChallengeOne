@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type ViewType = "softwareEngineer" | "dataEngineer";
+export type ViewType = "softwareEngineer" | "dataEngineer" | "aiMLEngineer";
 export type LanguageType = "en" | "es";
 
 export interface Project {
@@ -17,22 +17,37 @@ export interface Project {
   caracteristicas?: string[];
 }
 
+export interface Skill {
+  name: string;
+  icon?: React.ComponentType<{ className?: string }>;
+  level?: string;
+  years?: string;
+}
+
+export interface SkillCategory {
+  category: string;
+  items: Skill[];
+}
+
 export interface ProfileData {
   name: string;
   title: string;
   bio: string;
   projects: Project[];
   desktopProjects: Project[];
+  skills: SkillCategory[];
 }
 
 export interface ConfigType {
   en: {
     softwareEngineer: ProfileData;
     dataEngineer: ProfileData;
+    aiMLEngineer: ProfileData;
   };
   es: {
     softwareEngineer: ProfileData;
     dataEngineer: ProfileData;
+    aiMLEngineer: ProfileData;
   };
 }
 
