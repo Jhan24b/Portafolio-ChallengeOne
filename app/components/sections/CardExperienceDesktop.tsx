@@ -140,7 +140,7 @@ export default function CardExperienceDesktop({
             </div>
           </div>
 
-          <p className="text-astronaut-800 dark:text-muted-foreground text-xl leading-relaxed font-medium mb-10 border-l-4 border-astronaut-500/20 pl-8 py-2 italic font-medium">
+          <p className="text-astronaut-800 dark:text-muted-foreground text-xl leading-relaxed font-medium mb-10 border-l-4 border-astronaut-500/20 pl-8 py-2 italic">
             {description}
           </p>
 

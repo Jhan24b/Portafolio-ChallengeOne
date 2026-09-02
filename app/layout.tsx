@@ -7,17 +7,34 @@ import { ViewProvider } from "@/lib/ViewContext";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { ThemeProvider } from "@/lib/ThemeContext";
 import Stars from "./components/Stars";
+import { Metadata } from "next";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
-export const metadata = {
-  title: "Anthony Torres",
-  description: "My portfolio",
-  keywords: ["Anthony Torres", "portfolio", "Software Developer", "web developer", "react developer", "projects", "skills"],
-  icons:{
-    icon: "/lighLogo.png"
-  }
+// layout.tsx - metadata mejorada
+export const metadata: Metadata = {
+  title: {
+    default: "Anthony J. Torres | AI/ML & Data Engineer",
+    template: "%s | Anthony J. Torres"
+  },
+  description: "Software Engineer especializado en Data Engineering y AI/ML, con experiencia en MERN stack. Portfolio de proyectos, skills y experiencia profesional.",
+  metadataBase: new URL("https://jhandev.vercel.app"),
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    title: "Anthony J. Torres — AI/ML & Data Engineer",
+    description: "Portfolio profesional con proyectos MERN, pipelines de datos y soluciones AI/ML.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anthony J. Torres — AI/ML & Data Engineer",
+    images: ["/og-image.png"],
+  },
+  robots: { index: true, follow: true },
 };
+
 
 export default function RootLayout({
   children,
