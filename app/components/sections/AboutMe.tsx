@@ -4,7 +4,7 @@ import { useView } from "@/lib/ViewContext";
 import { useLanguage } from "@/lib/LanguageContext";
 import { CONFIG } from "@/lib/config";
 import { useEffect, useRef } from "react";
-import { Sparkles, Cpu, Code2, Database, Brain, Rocket } from "lucide-react";
+import { Sparkles, Code2, Database, Brain, Rocket } from "lucide-react";
 
 export default function AboutMe() {
   const { view } = useView();
@@ -12,15 +12,18 @@ export default function AboutMe() {
   const profile = CONFIG[language][view];
   const sectionRef = useRef<HTMLDivElement>(null);
   const bioRef = useRef<HTMLDivElement>(null);
+  const bioContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
     const bio = bioRef.current;
-    if (!section || !bio) return;
+    const container = bioContainerRef.current;
+    if (!section || !bio || !container) return;
 
     let rafId: number;
 
     const handleScroll = () => {
+      // En móvil no aplicamos el efecto
       if (!window.matchMedia("(min-width: 1024px)").matches) {
         bio.style.transform = "";
         return;
@@ -29,16 +32,33 @@ export default function AboutMe() {
       const rect = section.getBoundingClientRect();
       const wh = window.innerHeight;
 
-      // Scroll progress through the section: 0 when top of section at bottom of viewport, 1 when bottom at top
+      // Progreso del scroll dentro de la sección: 0 cuando el top de la sección
+      // está en el bottom de la pantalla, 1 cuando el bottom está en el top
       const progress = Math.max(
         0,
         Math.min(1, (wh - rect.top) / (rect.height + wh))
       );
 
-      // Parallax offset: moves opposite to scroll, range ±40px
-      const y = (0.5 - progress) * 80;
+      // Medidas del contenedor y del elemento para calcular límites
+      const containerHeight = container.clientHeight;
+      const bioHeight = bio.offsetHeight;
+      const bioRect = bio.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
 
-      // Use requestAnimationFrame for smooth updates
+      // Distancia desde el borde superior del contenedor al borde superior de la bio
+      const bioTop = bioRect.top - containerRect.top;
+
+      // Límites: no puede subir más allá del borde superior del contenedor
+      const maxUp = -bioTop;
+      // No puede bajar más allá del borde inferior del contenedor
+      const maxDown = containerHeight - (bioTop + bioHeight);
+
+      // Movimiento parallax deseado (mismo cálculo original)
+      let y = (0.5 - progress) * 80;
+
+      // Forzamos a que se mantenga dentro de los límites
+      y = Math.max(maxUp, Math.min(maxDown, y));
+
       rafId = requestAnimationFrame(() => {
         bio.style.transform = `translateY(${y}px)`;
       });
@@ -62,8 +82,8 @@ export default function AboutMe() {
     >
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cerulean-blue-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-astronaut-600/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-125 h-125 bg-cerulean-blue-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-125 h-125 bg-astronaut-600/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,13 +103,16 @@ export default function AboutMe() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Bio Section */}
-          <div className="lg:col-span-5 flex flex-col gap-8">
+          <div
+            ref={bioContainerRef}
+            className="lg:col-span-5 flex flex-col gap-8 relative py-10"
+          >
             <div
               ref={bioRef}
               className="relative group"
               style={{ willChange: "transform" }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-cerulean-blue-500 to-astronaut-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-cerulean-blue-500 to-astronaut-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <div className="relative glass p-8 rounded-3xl border border-astronaut-500/10 dark:border-white/10 overflow-hidden">
                 <div className="absolute top-0 right-0 p-6 opacity-10">
                   {view === "softwareEngineer" ? (
@@ -109,7 +132,7 @@ export default function AboutMe() {
                 </p>
 
                 <div className="mt-8 flex gap-4 relative z-10">
-                  <div className="px-4 py-2 rounded-lg bg-astronaut-950/5 dark:bg-white/5 border border-astronaut-950/10 dark:border-white/10 flex flex-col items-center justify-center min-w-[100px]">
+                  <div className="px-4 py-2 rounded-lg bg-astronaut-950/5 dark:bg-white/5 border border-astronaut-950/10 dark:border-white/10 flex flex-col items-center justify-center min-w-25">
                     <span className="text-3xl font-black text-cerulean-blue-500">
                       {view === "softwareEngineer"
                         ? "3+"
@@ -121,7 +144,7 @@ export default function AboutMe() {
                       Years Exp.
                     </span>
                   </div>
-                  <div className="px-4 py-2 rounded-lg bg-astronaut-950/5 dark:bg-white/5 border border-astronaut-950/10 dark:border-white/10 flex flex-col items-center justify-center min-w-[100px]">
+                  <div className="px-4 py-2 rounded-lg bg-astronaut-950/5 dark:bg-white/5 border border-astronaut-950/10 dark:border-white/10 flex flex-col items-center justify-center min-w-25">
                     <span className="text-3xl font-black text-cerulean-blue-500">
                       {profile.projects.length + profile.desktopProjects.length}
                       +
@@ -138,11 +161,11 @@ export default function AboutMe() {
           {/* Skills Section */}
           <div className="lg:col-span-7 flex flex-col gap-10">
             <div className="flex items-center gap-4 mb-2">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-astronaut-500/20 to-transparent"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent via-astronaut-500/20 to-transparent"></div>
               <h3 className="text-xl font-black uppercase tracking-[0.2em] text-astronaut-400 text-center">
                 {t("skills.title")}
               </h3>
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-astronaut-500/20 to-transparent"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent via-astronaut-500/20 to-transparent"></div>
             </div>
 
             <div className="grid gap-8">

@@ -11,7 +11,7 @@ export default function Header() {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <header className="sticky top-0 z-50 w-full glass shadow-md transition-all duration-500 py-3 px-4 font-sans h-[72px] md:h-[76px] flex items-center">
+    <header className="sticky top-0 z-50 w-full glass shadow-md transition-all duration-500 py-3 px-4 font-sans h-18 md:h-19 flex items-center">
       <div className="w-full flex items-center justify-between gap-2 max-w-7xl mx-auto">
         {/* Left: Logo and Name */}
         <div className="flex items-center gap-3">
@@ -38,7 +38,7 @@ export default function Header() {
         {/* Right: Controls (Language and Theme) */}
         <div className="flex items-center gap-2 sm:gap-3">
           {/* Language Switch */}
-          <button 
+          <button
             onClick={toggleLanguage}
             className="w-9 h-9 flex items-center justify-center glass rounded-full hover:bg-primary/10 transition-all text-xs font-black text-primary border border-primary/20 hover:scale-105 active:scale-95 cursor-pointer"
             aria-label="Toggle language"
@@ -47,7 +47,7 @@ export default function Header() {
           </button>
 
           {/* Theme Switch */}
-          <button 
+          <button
             onClick={toggleTheme}
             className="w-9 h-9 flex items-center justify-center glass rounded-full hover:bg-primary/10 transition-all text-primary hover:scale-105 active:scale-95 cursor-pointer"
             aria-label="Toggle theme"

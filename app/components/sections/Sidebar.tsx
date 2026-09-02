@@ -12,9 +12,10 @@ export default function Sidebar() {
 
   const sections = [
     { id: "about", icon: User, labelKey: "nav.about" },
-    { id: "formacion", icon: GraduationCap, labelKey: "nav.formation" },
+
     { id: "experience", icon: Briefcase, labelKey: "nav.projects" },
-    { id: "contact", icon: Mail, labelKey: "nav.contact" }
+    { id: "formacion", icon: GraduationCap, labelKey: "nav.formation" }
+    // { id: "contact", icon: Mail, labelKey: "nav.contact" }
   ];
 
   useEffect(() => {

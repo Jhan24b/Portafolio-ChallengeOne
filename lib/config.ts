@@ -33,7 +33,6 @@ import {
   Globe,
   Layout,
   Terminal,
-  Code2,
   Brain,
   Network,
   Eye,
@@ -187,54 +186,41 @@ export const CONFIG: ConfigType = {
       bio: "Data engineer specialized in cloud infrastructure and distributed systems — I design scalable ETL pipelines, data warehouses, and real-time streaming architectures using Azure, AWS, Spark, and Databricks. From data ingestion to query optimization, I build the infrastructure that turns raw data into strategic decisions.",
       projects: [
         {
-          title: "Big Data Pipeline",
-          subtitle: "Spark-Driven ETL",
+          title: "Telecom Data Pipeline at Scale",
+          subtitle: "DigitalRoute MediationZone (UEPE) + Databricks Multi-Node",
           role: "Data Engineer",
-          tech: [Zap, Database, Layers],
-          img: "/data-img1.jpg",
-          Arquitectura: "Medallion (Bronze, Silver, Gold)",
+          tech: [Database, Layers, Cloud],
+          img: "/telecom-pipeline.png", // crea un diagrama simple en Figma/Excalidraw, no screenshot de datos reales
+          Arquitectura:
+            "Multi-stage: Cleansing (UEPE) → Curated (Databricks/PySpark)",
           description:
-            "Implementation of a distributed ETL pipeline processing TBs of daily data using Apache Spark and Databricks, ensuring data quality and lineage.",
-          urlRepository: "https://github.com/Jhan24b",
+            "Designed and operated a multi-stage telecom data pipeline: large-scale cleaning and profiling of ~15TB of daily data using DigitalRoute MediationZone (UEPE) across concurrent nodes, then processing the resulting 1-2TB of curated output via multi-node Databricks/PySpark for analytics, reporting, and ML-readiness.",
+          urlRepository: "#", // proprietary — no repo público por confidencialidad
           urlProduction: "#",
+          status: "En producción (caso de estudio, código propietario)",
           caracteristicas: [
-            "Distributed Processing",
-            "Auto-scaling Clusters",
-            "Data Quality Validation"
+            "Multi-Node Processing",
+            "15TB/day Data Cleansing",
+            "ML-Ready Curated Output"
           ]
         },
         {
-          title: "Cloud Data Warehouse",
-          subtitle: "Azure Synapse Architecture",
-          role: "Data Architect",
-          tech: [Cloud, HardDrive, Cpu],
-          img: "/data-img2.jpg",
-          Arquitectura: "Hub-and-Spoke",
-          description:
-            "Design and deployment of a Data Warehouse in Azure, optimizing costs and query performance through partitioning and indexing strategies.",
-          urlRepository: "https://github.com/Jhan24b",
-          urlProduction: "#",
-          caracteristicas: [
-            "Query Optimization",
-            "Cost Management",
-            "Schema Modeling"
-          ]
-        },
-        {
-          title: "Real-time Streaming",
-          subtitle: "AWS Kinesis & Lambda",
+          title: "Telecom Churn ETL Pipeline",
+          subtitle: "dbt + Airflow + PySpark (Open Source Demo)",
           role: "Data Engineer",
-          tech: [Cloud, Zap, Database],
-          img: "/data-img3.jpg",
-          Arquitectura: "Kappa Architecture",
+          tech: [Workflow, Database, GitBranch],
+          img: "/churn-pipeline.png",
+          Arquitectura:
+            "Medallion (Bronze → Silver → Gold) orchestrated with Airflow",
           description:
-            "Serverless architecture for real-time event processing with AWS Kinesis, Lambda, and DynamoDB, achieving sub-second latency.",
-          urlRepository: "https://github.com/Jhan24b",
+            "End-to-end pipeline built on a public telecom churn dataset: ingestion and transformation modeled with dbt (tests + documentation), orchestrated via Airflow DAGs, with PySpark handling heavier transformations. Loaded into a Postgres/BigQuery sandbox with a lightweight dashboard for churn analysis.",
+          urlRepository: "https://github.com/Jhan24b/telecom-churn-pipeline", // crea el repo cuando arranques
           urlProduction: "#",
+          status: "En desarrollo",
           caracteristicas: [
-            "Low Latency",
-            "Event-Driven",
-            "Serverless Infrastructure"
+            "dbt Models & Tests",
+            "Airflow Orchestration",
+            "Medallion Architecture"
           ]
         }
       ],
@@ -276,54 +262,39 @@ export const CONFIG: ConfigType = {
       bio: "AI/ML engineer covering the full ML lifecycle — from feature engineering and model training (TensorFlow, PyTorch, scikit-learn) to production deployment and monitoring. I specialize in NLP, LLM fine-tuning, RAG architectures, computer vision, and time series forecasting. Beyond the algorithms, I bring MLOps rigor: reproducible experiments, model versioning, and responsible AI.",
       projects: [
         {
-          title: "Neural Compass",
-          subtitle: "RAG & LLM Fine-tuning",
+          title: "Document Q&A Assistant",
+          subtitle: "RAG Pipeline with Claude API",
           role: "AI Engineer",
-          tech: [Python, Layers, Workflow, Zap],
-          img: "/ai-project1.jpg",
+          tech: [Python, Layers, Workflow],
+          img: "/rag-project.png",
           Arquitectura: "Retrieval-Augmented Generation",
           description:
-            "Fine-tuned LLaMA-2 using LoRA and built a RAG pipeline with LangChain, ChromaDB, and OpenAI embeddings for intelligent document querying over technical manuals.",
-          urlRepository: "https://github.com/Jhan24b",
+            "Built a retrieval-augmented question-answering assistant using the Claude API combined with a vector database (Chroma/FAISS) for semantic search over technical documents, enabling context-aware answers grounded in source material.",
+          urlRepository: "https://github.com/Jhan24b/rag-claude-assistant",
           urlProduction: "#",
+          status: "En desarrollo (pulido para demo)",
           caracteristicas: [
-            "LLM Fine-tuning",
+            "Claude API Integration",
             "Semantic Search",
             "Context-aware Q&A"
           ]
         },
         {
-          title: "Deep Space Vision",
-          subtitle: "Satellite Imagery AI",
+          title: "Churn Prediction Model",
+          subtitle: "Classical ML on Curated Telecom Data",
           role: "ML Engineer",
-          tech: [Eye, Cpu, Layers, Python],
-          img: "/ai-project2.jpg",
-          Arquitectura: "Convolutional Neural Network",
+          tech: [Python, LineChart, Database],
+          img: "/churn-model.png",
+          Arquitectura: "Classical ML (scikit-learn)",
           description:
-            "Designed and deployed a YOLOv8-based object detection system for satellite imagery analysis, achieving 94% mAP on custom dataset with real-time inference via FastAPI.",
-          urlRepository: "https://github.com/Jhan24b",
+            "Built and evaluated a churn prediction model on the curated output of the telecom ETL pipeline, comparing multiple classical models and documenting real evaluation metrics (accuracy, F1, precision/recall) rather than a single headline number.",
+          urlRepository: "https://github.com/Jhan24b/telecom-churn-model",
           urlProduction: "#",
+          status: "Planificado",
           caracteristicas: [
-            "Real-time Detection",
-            "Transfer Learning",
-            "Model Quantization"
-          ]
-        },
-        {
-          title: "AstraPredict",
-          subtitle: "Time Series Forecasting",
-          role: "AI/ML Engineer",
-          tech: [LineChart, Database, Cloud, Python],
-          img: "/ai-project3.jpg",
-          Arquitectura: "Encoder-Decoder LSTM",
-          description:
-            "Built a telemetry prediction engine using ensemble methods (Prophet + LSTM) for anomaly detection in spacecraft sensor data, reducing false positives by 60%.",
-          urlRepository: "https://github.com/Jhan24b",
-          urlProduction: "#",
-          caracteristicas: [
-            "Anomaly Detection",
-            "Ensemble Modeling",
-            "AutoML Pipeline"
+            "Feature Engineering",
+            "Model Comparison",
+            "Documented Evaluation Metrics"
           ]
         }
       ],

@@ -9,13 +9,13 @@ export default function Home() {
     <>
       <Presentation />
 
-      <AboutMe/>
+      <AboutMe />
 
       <Experience />
 
       <Academic />
 
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 }
