@@ -24,5 +24,9 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "homepage": "https://jhan24b.github.io/Portafolio-ChallengeOne/"
+  "homepage": "https://jhan24b.github.io/Portafolio-ChallengeOne/",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=9.0.0"
+  }
 }
