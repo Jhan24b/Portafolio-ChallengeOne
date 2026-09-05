@@ -1,13 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import { Grade } from "@/types";
 import { useState, useRef, MouseEvent } from "react";
 import { Award } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 interface CardGradeProps {
   data: Grade;
 }
 
 export default function CardGrade({ data }: CardGradeProps) {
+  const { t } = useLanguage();
   const { title, subtitle, duration, img } = data;
   const cardRef = useRef<HTMLDivElement>(null);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
@@ -63,7 +67,7 @@ export default function CardGrade({ data }: CardGradeProps) {
         {/* Top Grade Decoration */}
         <div className="absolute top-4 right-6 flex items-center gap-1.5 translate-z-20">
           <Award className="w-4 h-4 text-cerulean-blue-600 dark:text-cerulean-blue-400 opacity-60" />
-          <span className="text-[10px] font-black text-astronaut-500 dark:text-cerulean-blue-400 tracking-tighter uppercase italic">Certified Achievement</span>
+          <span className="text-[10px] font-black text-astronaut-500 dark:text-cerulean-blue-400 tracking-tighter uppercase italic">{t("card.certified")}</span>
         </div>
 
         {/* Floating Logo Container */}
@@ -97,7 +101,7 @@ export default function CardGrade({ data }: CardGradeProps) {
           </div>
 
           <div className="mt-auto pt-6 border-t border-astronaut-500/5 dark:border-white/5 flex items-center justify-between px-2">
-            <span className="text-[10px] font-black text-astronaut-400 dark:text-muted-foreground uppercase tracking-widest italic">Period</span>
+            <span className="text-[10px] font-black text-astronaut-400 dark:text-muted-foreground uppercase tracking-widest italic">{t("card.period")}</span>
             <p className="text-xs font-black text-astronaut-900 dark:text-white bg-astronaut-500/10 dark:bg-white/10 px-3 py-1 rounded-full border border-astronaut-500/10 dark:border-white/10">
               {duration}
             </p>

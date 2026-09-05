@@ -13,12 +13,14 @@ import {
   Layers,
   ExternalLink
 } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 interface CardExperienceAIProps {
   card: Project & { type: string };
 }
 
 export default function CardExperienceAI({ card }: CardExperienceAIProps) {
+  const { t } = useLanguage();
   const [isImageLoading, setIsImageLoading] = useState(true);
   const [hasImageError, setHasImageError] = useState(false);
 
@@ -144,7 +146,7 @@ export default function CardExperienceAI({ card }: CardExperienceAIProps) {
 
               <div className="mb-8">
                 <span className="text-[12px] font-black text-astronaut-500 dark:text-muted-foreground uppercase tracking-[0.3em] mb-4 block">
-                  Tech Stack
+                  {t("card.tech_ecosystem")}
                 </span>
                 <div className="flex flex-wrap gap-4 justify-center">
                   {tech.map((Tecnologia, idx) => (
@@ -183,9 +185,10 @@ export default function CardExperienceAI({ card }: CardExperienceAIProps) {
                 <Link
                   href={urlProduction}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="group/btn flex items-center gap-3 bg-astronaut-950 dark:bg-white text-white dark:text-astronaut-950 px-8 py-3.5 rounded-full font-black uppercase text-xs tracking-widest hover:scale-105 transition-all shadow-xl shadow-astronaut-900/20 dark:shadow-white/5"
                 >
-                  <span>View Demo</span>
+                  <span>{t("card.launch_demo")}</span>
                   <ExternalLink className="w-4 h-4" />
                 </Link>
               )}
@@ -194,11 +197,12 @@ export default function CardExperienceAI({ card }: CardExperienceAIProps) {
                 <Link
                   href={urlRepository}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 font-black text-astronaut-600 dark:text-astronaut-400 hover:text-cerulean-blue-600 dark:hover:text-cerulean-blue-400 transition-colors uppercase text-xs tracking-widest group/repo"
                 >
                   <Github className="w-5 h-5 group-hover/repo:rotate-12 transition-transform" />
                   <span className="border-b-2 border-transparent group-hover:border-current">
-                    Source Code
+                    {t("card.source_code")}
                   </span>
                 </Link>
               )}

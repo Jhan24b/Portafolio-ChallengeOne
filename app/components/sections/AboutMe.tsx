@@ -141,7 +141,7 @@ export default function AboutMe() {
                           : "2+"}
                     </span>
                     <span className="text-xs uppercase tracking-wider text-astronaut-500 dark:text-astronaut-400">
-                      Years Exp.
+                      {t("about.years_exp")}
                     </span>
                   </div>
                   <div className="px-4 py-2 rounded-lg bg-astronaut-950/5 dark:bg-white/5 border border-astronaut-950/10 dark:border-white/10 flex flex-col items-center justify-center min-w-25">
@@ -150,7 +150,7 @@ export default function AboutMe() {
                       +
                     </span>
                     <span className="text-xs uppercase tracking-wider text-astronaut-500 dark:text-astronaut-400">
-                      Projects
+                      {t("about.projects")}
                     </span>
                   </div>
                 </div>

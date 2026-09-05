@@ -27,6 +27,8 @@ export default function Footer() {
             <Link
               href="https://github.com/Jhan24b"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
               className="p-3 glass rounded-full hover:bg-primary/10 transition-all hover:-translate-y-1"
             >
               <Github className="w-5 h-5 text-primary" />
@@ -34,23 +36,11 @@ export default function Footer() {
             <Link
               href="https://www.linkedin.com/in/anthony-torres-13591b1b5/"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="p-3 glass rounded-full hover:bg-primary/10 transition-all hover:-translate-y-1"
             >
               <Linkedin className="w-5 h-5 text-primary" />
-            </Link>
-            <Link
-              href="#"
-              target="_blank"
-              className="p-3 glass rounded-full hover:bg-primary/10 transition-all hover:-translate-y-1"
-            >
-              <Instagram className="w-5 h-5 text-primary" />
-            </Link>
-            <Link
-              href="#"
-              target="_blank"
-              className="p-3 glass rounded-full hover:bg-primary/10 transition-all hover:-translate-y-1"
-            >
-              <Facebook className="w-5 h-5 text-primary" />
             </Link>
           </div>
         </div>
@@ -59,7 +49,7 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground">
             {t("footer.built_with")} <br />
             <span className="text-primary font-bold">
-              Full Stack & Data Engineering
+              AI/ML & Data Engineering
             </span>
           </p>
         </div>

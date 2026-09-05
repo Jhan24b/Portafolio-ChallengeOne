@@ -11,13 +11,12 @@ import { Metadata } from "next";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
-// layout.tsx - metadata mejorada
 export const metadata: Metadata = {
   title: {
     default: "Anthony J. Torres | AI/ML & Data Engineer",
     template: "%s | Anthony J. Torres"
   },
-  description: "Software Engineer especializado en Data Engineering y AI/ML, con experiencia en MERN stack. Portfolio de proyectos, skills y experiencia profesional.",
+  description: "Software Engineer especializado en Data Engineering y AI/ML.",
   metadataBase: new URL("https://jhandev.vercel.app"),
   alternates: { canonical: "/" },
   openGraph: {

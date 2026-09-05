@@ -56,7 +56,7 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <nav className="fixed left-3 md:left-6 top-1/2 -translate-y-1/2 z-40 w-12 glass rounded-full py-3 px-1.5 shadow-2xl border border-white/20 dark:border-white/10 transition-all duration-300 flex flex-col items-center gap-2 font-sans">
+    <nav aria-label="Section Navigation" className="fixed left-3 md:left-6 top-1/2 -translate-y-1/2 z-40 w-12 glass rounded-full py-3 px-1.5 shadow-2xl border border-white/20 dark:border-white/10 transition-all duration-300 flex flex-col items-center gap-2 font-sans">
       {sections.map((section) => {
         const Icon = section.icon;
         const isActive = activeSection === section.id;

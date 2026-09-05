@@ -6,12 +6,14 @@ import Github from "../icons/Github";
 import Link from "next/link";
 import { Project } from "@/types";
 import { Layers, Terminal, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 interface CardExperienceProps {
   card: Project & { type: string };
 }
 
 export default function CardExperience({ card }: CardExperienceProps) {
+  const { t } = useLanguage();
   const [isImageLoading, setIsImageLoading] = useState(true);
   const [hasImageError, setHasImageError] = useState(false);
 
@@ -39,7 +41,7 @@ export default function CardExperience({ card }: CardExperienceProps) {
       <div className="flex-1 relative w-full perspective-1000">
         <div className="relative overflow-hidden rounded-4xl border border-astronaut-900/10 dark:border-white/10 shadow-2xl aspect-video group-hover:shadow-cerulean-blue-500/20 transition-all duration-500">
           {(isImageLoading || hasImageError) && (
-            <div className="absolute inset-0 bg-gradient-to-br from-astronaut-200/50 to-astronaut-300/50 dark:from-astronaut-800/50 dark:to-astronaut-900/50 animate-pulse z-10"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-astronaut-200/50 to-astronaut-300/50 dark:from-astronaut-800/50 dark:to-astronaut-900/50 animate-pulse z-10"></div>
           )}
           {!hasImageError && (
             <Image
@@ -63,11 +65,11 @@ export default function CardExperience({ card }: CardExperienceProps) {
               <div className="flex items-center gap-2">
                 <Terminal className="w-3 h-3 text-cerulean-blue-400" />
                 <span className="text-[10px] font-black text-cerulean-blue-400 uppercase tracking-[0.2em]">
-                  Deployment Status
+                  {t("card.deploy_status")}
                 </span>
               </div>
               <span className="text-sm font-black text-white uppercase italic">
-                Active Node
+                {t("card.active_node")}
               </span>
             </div>
             <Layers className="w-10 h-10 text-white/20" />
@@ -100,7 +102,7 @@ export default function CardExperience({ card }: CardExperienceProps) {
         {/* Tech Ecosystem */}
         <div className="mb-10">
           <span className="text-[10px] font-black text-astronaut-400 dark:text-muted-foreground uppercase tracking-[0.3em] mb-4 block">
-            Tech Ecosystem
+            {t("card.tech_ecosystem")}
           </span>
           <div className="flex flex-wrap gap-3">
             {tech.map((Tecnologia, idx) => (
@@ -126,9 +128,10 @@ export default function CardExperience({ card }: CardExperienceProps) {
             <Link
               href={urlProduction}
               target="_blank"
+              rel="noopener noreferrer"
               className="group/btn flex items-center gap-3 bg-astronaut-950 dark:bg-white text-white dark:text-astronaut-950 px-8 py-3.5 rounded-full font-black uppercase text-xs tracking-widest hover:scale-105 transition-all shadow-xl shadow-astronaut-900/20 dark:shadow-white/5"
             >
-              <span>Launch Demo</span>
+              <span>{t("card.launch_demo")}</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
           )}
@@ -137,11 +140,12 @@ export default function CardExperience({ card }: CardExperienceProps) {
             <Link
               href={urlRepository}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 font-black text-astronaut-600 dark:text-astronaut-400 hover:text-cerulean-blue-600 dark:hover:text-cerulean-blue-400 transition-colors uppercase text-xs tracking-widest group/repo"
             >
               <Github className="w-5 h-5 group-hover/repo:rotate-12 transition-transform" />
               <span className="border-b-2 border-transparent group-hover:border-current">
-                Source Code
+                {t("card.source_code")}
               </span>
             </Link>
           )}

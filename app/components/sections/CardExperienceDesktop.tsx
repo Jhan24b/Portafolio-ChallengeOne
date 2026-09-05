@@ -5,7 +5,6 @@ import Image from "next/image";
 import Github from "../icons/Github";
 import Link from "next/link";
 import { Project } from "@/types";
-import { useView } from "@/lib/ViewContext";
 import {
   Boxes,
   Box,
@@ -38,9 +37,7 @@ export default function CardExperienceDesktop({
     urlRepository
   } = card;
 
-  const { view } = useView();
   const isReversed = type === "cardinvertedD";
-  const isDataEngineer = view === "dataEngineer";
 
   return (
     <div

@@ -11,14 +11,8 @@ import { CONFIG } from "@/lib/config";
 
 export default function Presentation() {
   const { view } = useView();
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const data = CONFIG[language][view];
-
-  const greeting = language === "en" ? "Hi, I'm" : "Hola, soy";
-  const fixedBio =
-    language === "en"
-      ? "Systems Engineer and self-taught developer passionate about technology, innovation, and building impactful digital solutions. Always exploring, always learning."
-      : "Ingeniero de Sistemas y desarrollador autodidacta, apasionado por la tecnología, la innovación y la creación de soluciones digitales con impacto real. Siempre explorando, siempre aprendiendo.";
 
   return (
     <section id="presentation" className="overflow-hidden">
@@ -29,26 +23,27 @@ export default function Presentation() {
             <Image
               className="relative z-10 rounded-2xl shadow-2xl border-2 border-white/10"
               src="/profile.png"
-              alt="profile"
-              width="250"
-              height="250"
+              alt="Anthony J. Torres - AI/ML & Data Engineering"
+              width={250}
+              height={250}
             />
           </div>
           <div className="flex-1 mt-12 md:mt-0 text-center md:text-left">
             <h1 className="font-extrabold mb-6 text-xl md:text-2xl lg:text-5xl leading-[1.1] text-astronaut-300 dark:text-cerulean-blue-50  tracking-tight ">
-              {greeting} <span className="text-primary">{data.name}</span>,{" "}
+              {t("presentation.greeting")} <span className="text-primary">{data.name}</span>,{" "}
               <br />
               <span className="text-cerulean-blue-600 dark:text-cerulean-blue-400 opacity-90">
                 {data.title}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-medium max-w-2xl mx-auto md:mx-0">
-              {fixedBio}
+              {t("presentation.bio")}
             </p>
             <div className="flex gap-4 mt-8 justify-center md:justify-center items-center flex-wrap">
               <Link
                 href="https://github.com/Jhan24b"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-2.5 glass rounded-full hover:bg-primary/10 transition-all hover:-translate-y-1 text-foreground font-bold text-sm"
               >
                 <Github className="w-5 h-5 text-astronaut-800 dark:text-astronaut-200" />
