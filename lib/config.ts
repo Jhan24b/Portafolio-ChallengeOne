@@ -214,7 +214,7 @@ export const CONFIG: ConfigType = {
             "Medallion (Bronze → Silver → Gold) orchestrated with Airflow",
           description:
             "End-to-end pipeline built on a public telecom churn dataset: ingestion and transformation modeled with dbt (tests + documentation), orchestrated via Airflow DAGs, with PySpark handling heavier transformations. Loaded into a Postgres/BigQuery sandbox with a lightweight dashboard for churn analysis.",
-          urlRepository: "https://github.com/Jhan24b/telecom-churn-pipeline", // crea el repo cuando arranques
+          urlRepository: "https://github.com/Jhan24b/telecom-churn-pipeline",
           urlProduction: "#",
           status: "En desarrollo",
           caracteristicas: [

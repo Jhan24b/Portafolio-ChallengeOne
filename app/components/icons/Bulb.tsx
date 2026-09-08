@@ -1,8 +1,7 @@
-import { IconProps } from "@/types";
-function Bulb({ className = "w-8 h-8" }: IconProps) {
+function Bulb() {
   return (
     <svg
-      className="w-[36px] h-[36px] text-astronaut-800 dark:text-mercury-100"
+      className="w-9 h-9 text-astronaut-800 dark:text-mercury-100"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -11,13 +10,12 @@ function Bulb({ className = "w-8 h-8" }: IconProps) {
       viewBox="0 0 24 24"
     >
       <path
-  stroke="currentColor"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  strokeWidth="2"
-  d="M9 9a3 3 0 0 1 3-3m-2 15h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 6 9c0 4 4 5 4 9h4Z"
-/>
-
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M9 9a3 3 0 0 1 3-3m-2 15h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 6 9c0 4 4 5 4 9h4Z"
+      />
     </svg>
   );
 }

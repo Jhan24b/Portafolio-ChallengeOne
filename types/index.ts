@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export type ViewType = "softwareEngineer" | "dataEngineer" | "aiMLEngineer";
 export type LanguageType = "en" | "es";
 

@@ -5,14 +5,7 @@ import Image from "next/image";
 import Github from "../icons/Github";
 import Link from "next/link";
 import { Project } from "@/types";
-import {
-  Brain,
-  Cpu,
-  Activity,
-  Sparkles,
-  Layers,
-  ExternalLink
-} from "lucide-react";
+import { Brain, Cpu, Activity, Sparkles, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 interface CardExperienceAIProps {
@@ -41,18 +34,18 @@ export default function CardExperienceAI({ card }: CardExperienceAIProps) {
 
   return (
     <div className="group relative w-full max-w-5xl mx-auto mb-16 px-4">
-      <div className="absolute inset-0 bg-[radial-gradient(circle,#0ea5e9_0.5px,transparent_0.5px)] [background-size:20px_20px] opacity-[0.04] dark:opacity-[0.06] rounded-3xl -z-10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle,#0ea5e9_0.5px,transparent_0.5px)] bg_size-[20px_20px] opacity-[0.04] dark:opacity-[0.06] rounded-3xl -z-10"></div>
 
       <div className="relative glass border border-astronaut-500/20 dark:border-cerulean-blue-500/20 rounded-3xl overflow-hidden hover:border-cerulean-blue-500/40 transition-all duration-500 hover:shadow-[0_0_60px_-12px_rgba(14,165,233,0.2)] dark:hover:shadow-[0_0_60px_-12px_rgba(14,165,233,0.25)] bg-white/40 dark:bg-white/5">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cerulean-blue-500 to-transparent"></div>
+        <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-cerulean-blue-500 to-transparent"></div>
 
         <div
           className={`flex flex-col lg:flex-row gap-8 p-6 lg:p-10 ${isReversed ? "lg:flex-row-reverse" : ""}`}
         >
           <div className="w-full lg:w-2/5 flex flex-col gap-6">
-            <div className="relative group/img overflow-hidden rounded-2xl border border-astronaut-900/10 dark:border-white/10 shadow-2xl aspect-[4/3]">
+            <div className="relative group/img overflow-hidden rounded-2xl border border-astronaut-900/10 dark:border-white/10 shadow-2xl aspect-4/3">
               {(isImageLoading || hasImageError) && (
-                <div className="absolute inset-0 bg-gradient-to-br from-astronaut-200/50 to-astronaut-300/50 dark:from-astronaut-800/50 dark:to-astronaut-900/50 animate-pulse z-10"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-astronaut-200/50 to-astronaut-300/50 dark:from-astronaut-800/50 dark:to-astronaut-900/50 animate-pulse z-10"></div>
               )}
               {!hasImageError && (
                 <Image
@@ -67,7 +60,7 @@ export default function CardExperienceAI({ card }: CardExperienceAIProps) {
                   }}
                 />
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-astronaut-950/90 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-astronaut-950/90 via-transparent to-transparent"></div>
 
               <div className="absolute top-4 left-4">
                 <div className="px-3 py-1.5 bg-cerulean-blue-500/20 backdrop-blur-xl border border-cerulean-blue-400/30 rounded-full flex items-center gap-2">
@@ -151,7 +144,7 @@ export default function CardExperienceAI({ card }: CardExperienceAIProps) {
                 <div className="flex flex-wrap gap-4 justify-center">
                   {tech.map((Tecnologia, idx) => (
                     <div key={idx} className="relative group/tech">
-                      <div className="absolute -inset-1 bg-gradient-to-r from-cerulean-blue-600 to-astronaut-600 rounded-xl blur opacity-0 group-hover/tech:opacity-20 transition duration-500"></div>
+                      <div className="absolute -inset-1 bg-linear-to-r from-cerulean-blue-600 to-astronaut-600 rounded-xl blur opacity-0 group-hover/tech:opacity-20 transition duration-500"></div>
                       <div className="relative p-3 bg-astronaut-500/5 dark:bg-white/5 border border-astronaut-500/10 dark:border-white/10 rounded-xl hover:border-cerulean-blue-500/30 transition-all flex items-center justify-center shadow-sm">
                         {typeof Tecnologia !== "string" ? (
                           <Tecnologia className="w-6 h-6 text-astronaut-900 dark:text-foreground" />
